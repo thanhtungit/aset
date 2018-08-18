@@ -4,7 +4,7 @@ if ( ! class_exists( 'WC_Payment_Gateway' ) ) {
 		return;
 	}
 
-add_action('admin_init','init_123payment');
+add_action('init','init_123payment');
  
 function init_123payment(){
     function woocommerce_add_123payment_gateway( $methods ) {
@@ -29,12 +29,13 @@ class WC_123payment extends WC_Payment_Gateway {
 		protected $msg = array();
 
        public function __construct() {
-			$this->id           = '123payment';
-			$this->method_title = __( '123 Pay Gateway Viet Nam', '123payment' );
+			$this->id           = '123pay';
+			$this->method_title = __( '123Pay Gateway VietNam', '123payment' );
 			$this->has_fields   = false;
 			$this->order_button_text = __( 'Proceed to 123Pay', 'woocommerce' );
 			$this->method_title  = __( '123Pay Gateway', 'woocommerce' );
 			$this->method_description = __( '123Pay Standard redirects customers to 123Pay to enter their payment information.', 'woocommerce' );
+			$this->icon = TEMPLATE_PATH.'/images/123pay-logo.png';
 			$this->supports  = array(
 					'products',
 					'refunds',
@@ -102,7 +103,7 @@ class WC_123payment extends WC_Payment_Gateway {
             'title'       => __( 'Description', 'wc-gateway-offline' ),
             'type'        => 'textarea',
             'description' => __( 'Payment method description that the customer will see on your checkout.', 'wc-gateway-offline' ),
-            'default'     => __( 'Please remit payment to Store Name upon pickup or delivery.', 'wc-gateway-offline' ),
+            'default'     => __( 'Pay via 123Pay Gateway in Việt Nam.', 'wc-gateway-offline' ),
             'desc_tip'    => true,
         ),
         'testmode'              => array(
