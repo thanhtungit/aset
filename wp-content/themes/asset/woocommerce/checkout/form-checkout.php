@@ -39,28 +39,60 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
-			<div class="col-1">
+			<div class="col-md-8 float-left">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				<div class="box box-payment">
+			   	  <h3>Payment Information</h3>
+			   	  <?php echo woocommerce_checkout_payment(); ?>
+			   </div>
+			   <div class="box box-order">
+			        <h3 id="order_review_heading"><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
+				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+				<div id="order_review" class="woocommerce-checkout-review-order">
+					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+					<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+
+				<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+				</div>
+				<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+			    </div>
 			</div>
 
-			<div class="col-2">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+			<div class="col-md-4 float-left">
+				<table>
+			 		<tr>
+						<td><?php _e( 'Subtotal', 'woocommerce' ); ?></td>
+						<td><?php wc_cart_totals_subtotal_html(); ?></td>	
+					</tr>
+				<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+					<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+						<td>Discount codes: <?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+						<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+					</tr>
+				<?php endforeach; ?>
+					<tr>
+						<th><?php _e( 'Grand Total', 'woocommerce' ); ?></th>
+						<td><?php wc_cart_totals_order_total_html(); ?></td>
+					</tr>
+					<tr>
+				      <td colspan="2">
+				      	Billing Information
+				      	Tung Ken <br/>
+				      	whynot020689@gmail.com<br/>
+				      	10 Điện Biên Phủ, p5. Q.10 Việt Nam<br/>
+				      	Phone: 012323232
+				      </td>		
+					</tr>
+			</table>
 			</div>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
-
-	<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
-
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
-
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
 
