@@ -1,0 +1,55 @@
+/* ================================== min-width 1140px ================================== */
+/* ================================== min-width 992px =================================== */
+@media (min-width: 992px) and (max-width: 1140px) {
+
+}
+/* ================================== min-width 768px and max-width 992px ===============*/
+@media (min-width: 768px) and (max-width: 992px) {
+  header {
+    padding: 10px 0 0;
+  }
+  .page.home .tab-products .tab-content .tab-pane .product-item .col-content, .page.home .tab-products .tab-content .tab-pane .product-item .col-price {
+    width: 100%;
+    padding-right: 26px;
+  }
+}
+/*  ================================  min-width 640px and max-width 768px =====================================*/
+@media (min-width: 640px) and (max-width: 768px) {
+  header {
+    padding: 10px 0 0;
+  }
+  .page.home .tab-products .tab-content .tab-pane .product-item .col-content, .page.home .tab-products .tab-content .tab-pane .product-item .col-price {
+    width: 100%;
+    padding-right: 26px;
+  }
+}
+
+/* ================================== min-width 0 and max-width 768px ====================== */
+@media (min-width: 0) and (max-width: 640px) {
+  .d-none-640 {
+    display: none !important;
+  }
+  .d-block-640 {
+    display: block !important;
+  }
+  header {
+    padding: 10px 0 0;
+    .menu-main {
+      margin: 0;
+    }
+  }
+  .page.home .tab-products .tab-content .tab-pane .product-item .col-content, .page.home .tab-products .tab-content .tab-pane .product-item .col-price {
+    width: 100%;
+    padding-right: 26px;
+  }
+  .page.home {
+    .banner {
+      height: 600px;
+      .container {
+        .row {
+          top: 55%;
+        }
+      }
+    }
+  }
+}

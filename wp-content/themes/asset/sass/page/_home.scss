@@ -47,6 +47,13 @@
           line-height: 20px;
         }
       }
+      .scroll-tab {
+        position: relative;
+        overflow-x: auto;
+        .nav-tabs {
+          width: 860px;
+        }
+      }
     }
     .tab-content {
       padding: 30px 0;

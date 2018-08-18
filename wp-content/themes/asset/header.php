@@ -17,17 +17,18 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-1">
-                <a href="<?php echo HOME_URL; ?>"><img src="<?php echo TEMPLATE_PATH ?>/images/logo.png" alt=""></a>
-            </div>
-            <div class="col-md-5">
+        <div class="row text-center m-1">
+            <a class="d-none d-block-640 col-12" href="<?php echo HOME_URL; ?>"><img src="<?php echo TEMPLATE_PATH ?>/images/logo.png" alt=""></a>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-7 col-sm-9">
+                <a href="<?php echo HOME_URL; ?>" class="d-none-640"><img src="<?php echo TEMPLATE_PATH ?>/images/logo.png" alt=""></a>
                 <ul class="menu-main">
                     <li class="has-children"><a href="">for home</a></li>
                     <li><a href="">contact us</a></li>
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-5 col-sm-3">
                 <div class="fRight">
                     <div class="search-icon rCommon">
                         <img src="<?php echo TEMPLATE_PATH ?>/images/magnifying_glass.png" alt="">
