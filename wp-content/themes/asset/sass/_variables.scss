@@ -1,0 +1,132 @@
+/*===================
+PARAMATERS=====================*/
+
+
+/*===================
+COLOR=====================*/
+
+
+/*===================
+FONTS=====================*/
+@mixin FontRegular ( $value, $line:1.1 ) {
+	font-family: 'MyriadProRegular', arial, helvetica, sans-serif;
+	font-size: $value;
+	line-height: $line;
+	font-weight: normal;
+}
+
+@mixin FontBold ( $value, $line:1.1 ) {
+	font-family: 'MyriadPro-BoldCond', arial, helvetica, sans-serif;
+	font-size: $value;
+	line-height: $line;
+	font-weight: normal;
+}
+
+/*===================
+FUNCTIONS=====================*/
+@function em($size) {
+	@return #{$size / 13px}em;
+}
+
+/*===================
+MIXIN=====================*/
+@mixin animate($time){
+	-webkit-transition: all $time;
+	-moz-transition: all $time;
+	transition: all $time;
+}
+
+@mixin selectNone(){
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+
+
+@mixin boderRadius($value)
+{
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin borderCorner ($value) {
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin setOpacity ($value) {
+	opacity: $value;
+	filter: alpha(opacity=$value*100);
+}
+
+@mixin backgroundCover()
+{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin displayFlex()
+{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+	-webkit-justify-content: center; /* Safari 6.1+ */
+	justify-content: center;
+
+	-webkit-align-items: center; /* Safari 7.0+ */
+	align-items: center;
+}
+
+@mixin objAbsoluteMiddle() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%); /* IE 9 */
+	-webkit-transform: translate(-50%, -50%); /* Safari */
+}
+
+@mixin clearObjAbsoluteMiddle() {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: translate(0, 0);
+	-ms-transform: translate(0, 0); /* IE 9 */
+	-webkit-transform: translate(0, 0); /* Safari */
+}
+
+@mixin Rotate($value)
+{
+	-ms-transform: rotate($value+deg); /* IE 9 */
+	-moz-transform: rotate($value+deg);
+	-o-transform: rotate($value+deg);
+	-webkit-transform: rotate($value+deg); /* Chrome, Safari, Opera */
+	transform: rotate($value+deg);
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+@mixin noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

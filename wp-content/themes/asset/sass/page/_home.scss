@@ -1,0 +1,186 @@
+.page.home {
+  /* banner */
+  .banner {
+    height: 450px;
+    background: radial-gradient(circle, #009FAE 0%, #004A55 100%);
+    .container {
+      height: 100%;
+      position: relative;
+      .row {
+        @include objAbsoluteMiddle();
+        width: 100%;
+        flex-flow: row wrap;
+        align-items: center;
+        h1 {
+          color: #FEFEFE;
+          font-family: 'Helvetica', sans-serif;
+          font-size: 44px;
+          font-weight: bold;
+          line-height: 53px;
+          text-align: right;
+        }
+        .btn-nod32 {
+          display: table;
+          margin: 0 0 0 auto;
+        }
+        img {
+          margin-left: 77px;
+        }
+      }
+    }
+  }
+  /*Tab products*/
+  .tab-products {
+    .tab-control {
+      background-color: #D1E8EF;
+      .nav-link {
+        padding: 20px 55px;
+        text-align: center;
+        height: 100%;
+        p {
+          margin-top: 13px;
+          margin-bottom: 0;
+          color: #637381;
+          font-family: 'Helvetica', sans-serif;
+          font-size: 17px;
+          font-weight: 300;
+          line-height: 20px;
+        }
+      }
+    }
+    .tab-content {
+      padding: 30px 0;
+      .tab-pane {
+        padding: 0;
+        .product-item {
+          border-radius: 8px;
+          background-color: #FFFFFF;
+          box-shadow: 0 1px 25px 0 rgba(0,0,0,0.15);
+          padding: 12px 0 16px 26px;
+          margin-bottom: 30px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          .col-img {
+            width: 118px;
+            text-align: center;
+            margin-right: 21px;
+            a {
+              color: #008BA0;
+              font-family: Helvetica;
+              font-size: 13px;
+              line-height: 16px;
+            }
+          }
+          .col-content {
+            width: 570px;
+            h4 {
+              color: #008BA0;
+              font-family: Helvetica;
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 24px;
+            }
+            p {
+              color: #637381;
+              font-family: Helvetica;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+          .col-price {
+            width: 375px;
+            font-family: Helvetica;
+            div {
+              float: left;
+              width: 50%;
+              text-align: center;
+            }
+            p {
+              font-size: 15px;
+              line-height: 18px;
+              margin-bottom: 38px;
+              margin-top: 18px;
+            }
+            strong {
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 22px;
+              margin-bottom: 15px;
+              display: block;
+            }
+            a.btn-nod32 {
+              padding: 7px 34px;
+              font-size: 15px;
+              line-height: 18px;
+              color: #fff;
+            }
+            a {
+              display: table;
+              margin: 15px auto 0;
+              font-size: 15px;
+              line-height: 18px;
+              color: #008BA0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*brand*/
+  .brand {
+    margin-bottom: 32px;
+    h3 {
+      color: #454F5B;
+      font-family: Helvetica;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 43px;
+      margin-bottom: 38px;
+    }
+    .col-md-3 {
+      color: #454F5B;
+      p {
+        font-family: Helvetica;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 31px;
+        text-align: center;
+        margin: 10px 0;
+      }
+      p:last-of-type {
+        color: #454F5B;
+        font-family: Helvetica;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+    }
+  }
+  /*About*/
+  .about {
+    padding: 41px 0;
+    background: #0096a1;
+    h3 {
+      color: #FFFFFF;
+      font-family: Helvetica;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 43px;
+      text-align: center;
+      margin-bottom: 38px;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      color: #FFFFFF;
+      font-family: Helvetica;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+}
