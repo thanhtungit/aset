@@ -42,11 +42,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<div class="col-md-8 float-left">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<div class="box box-payment">
-			   	  <h3>Payment Information</h3>
+			   	  <h3><span class="number">2</span>Payment Information</h3>
 			   	  <?php echo woocommerce_checkout_payment(); ?>
 			   </div>
 			   <div class="box box-order">
-			        <h3 id="order_review_heading"><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
+			        <h3 id="order_review_heading"><span class="number">3</span><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
 				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
 				<div id="order_review" class="woocommerce-checkout-review-order">
@@ -79,7 +79,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 					</tr>
 					<tr>
 				      <td colspan="2">
-				      	Billing Information
+				      	<p>Billing Information</p>
 				      	Tung Ken <br/>
 				      	whynot020689@gmail.com<br/>
 				      	10 Điện Biên Phủ, p5. Q.10 Việt Nam<br/>

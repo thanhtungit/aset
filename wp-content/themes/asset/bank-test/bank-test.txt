@@ -1,0 +1,7 @@
+Accout Test Sanbox Onepay
+Bank : VCB
+Account I-Banking: ONEPAY
+Card number: 6868682607535021
+Account Name: NGUYEN HONG NHUNG
+Date: 12/08
+OPT: 123456

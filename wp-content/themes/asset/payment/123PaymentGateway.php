@@ -45,6 +45,7 @@ class WC_123payment extends WC_Payment_Gateway {
 			$this->title            = $this->settings['title'];
 			$this->description      = $this->settings['description'];
 			$this->merchant_id      = $this->settings['merchant_id'];
+			$this->access_code      = $this->settings['access_code'];
 			$this->vahed            = $this->settings['vahed'];
 			$this->redirect_page_id = $this->settings['redirect_page_id'];
 			$this->msg['message']   = "";
@@ -54,7 +55,7 @@ class WC_123payment extends WC_Payment_Gateway {
 			$this->debug          = 'yes' === $this->get_option( 'debug', 'no' );
 			if ( $this->testmode ) {
 			/* translators: %s: Link to PayPal sandbox testing guide page */
-			$this->description .= ' ' . sprintf( __( 'SANDBOX ENABLED. You can use sandbox testing accounts only. See the <a href="%s">PayPal Sandbox Testing Guide</a> for more details.', 'woocommerce' ), 'https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/' );
+			$this->description .= ' ' . sprintf( __( 'SANDBOX ENABLED. You can use sandbox testing accounts only.', 'woocommerce' ), '' );
 			    $this->description  = trim( $this->description );
 		    }
 		    add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
@@ -66,6 +67,7 @@ class WC_123payment extends WC_Payment_Gateway {
 			add_action( 'valid-123payment-request', array( $this, 'successful_request' ) );
 			
 			add_action( 'woocommerce_receipt_123payment', array( $this, 'receipt_page' ) );
+			//add_action( 'woocommerce_api_' . strtolower( __CLASS__ ), array( $this, 'handle_onepay_ipn' ) );
 		}  
 
 	public static function log( $message, $level = 'info' ) {
@@ -73,7 +75,7 @@ class WC_123payment extends WC_Payment_Gateway {
 			if ( empty( self::$log ) ) {
 				self::$log = wc_get_logger();
 			}
-			self::$log->log( $level, $message, array( 'source' => 'paypal' ) );
+			self::$log->log( $level, $message, array( 'source' => 'napas' ) );
 		}
 	}   
     
@@ -110,7 +112,7 @@ class WC_123payment extends WC_Payment_Gateway {
 		'title'       => __( '123Pay sandbox', 'woocommerce' ),
 		'type'        => 'checkbox',
 		'label'       => __( 'Enable 123Pay sandbox', 'woocommerce' ),
-		'default'     => 'no',
+		'default'     => 'yes',
 		/* translators: %s: URL */
 		'description' => sprintf( __( '123Pay sandbox can be used to test payments. Sign up for a <a href="%s">developer account</a>.', 'woocommerce' ), 'https://developer.paypal.com/' ),
 		),
@@ -126,8 +128,23 @@ class WC_123payment extends WC_Payment_Gateway {
         'merchant_id'      => array(
 					'title'       => __( 'Merchant ID', '123payment' ),
 					'type'        => 'text',
-					'description' => __( '', '123payment' )
+					'description' => __( 'The unique merchant Id assigned to you by your
+Payment Provider.', '123payment' )
 		),
+		'access_code'      => array(
+					'title'       => __( 'Access Code', '123payment' ),
+					'type'        => 'text',
+					'description' => __( 'The access Code assigned to you by your
+					Payment Provider.', '123payment' )
+		),
+		'secure_hash'  => array(
+					'title'       => __( 'Secure Hash', '123payment' ),
+					'type'        => 'text',
+					'description' => __( 'The secure hash assigned to you by your
+					Payment Provider.', '123payment' )
+		),
+
+
 		'vahed' => array(
 					'title'       => __( 'Currency Unit','123payment' ),
 					'type'        => 'select',
@@ -172,9 +189,121 @@ class WC_123payment extends WC_Payment_Gateway {
 			echo $this->generate_123payment_form( $order );
 	}
 	public function process_payment( $order_id ) {
-			$order = new WC_Order( $order_id );
-			return array( 'result' => 'success', 'redirect' => $order->get_checkout_payment_url( true ) );
+			$order = wc_get_order( $order_id );
+			return array( 
+				'result' => 'success',
+				'redirect' =>$this->get_pay_url( $order )
+			);
 	}
+
+	/**
+	 * Set the cron job running queryDR in 20 mintues
+	 * Because the Napas payment timeout is 15 minutes
+	 *
+	 * @param string $vpc_MerchTxnRef
+	 */
+	public function set_onepay_querydr_cron( $vpc_MerchTxnRef ) {
+
+		wp_schedule_single_event(
+			time() + 20 * 60,
+			'woo_handle_napas_querydr',
+			array( $vpc_MerchTxnRef )
+		);
+
+	}
+
+
+	/**
+	 * Create the vpc_SecureHash value.
+	 * @seehttp://saca.com.vn/vnt_upload/product/11_2017/NAPASMerchantIntegrationSpecification_2.2.pdf
+	 *
+	 * @param  array $args
+	 *
+	 * @return string
+	 */
+	public function create_vpc_SecureHash( $args ) {
+		$stringHashData = "";
+
+		// arrange array data a-z before make a hash
+		ksort( $args );
+
+		foreach ( $args as $key => $value ) {
+
+			if ( strlen( $value ) > 0 ) {
+				if ( ( strlen( $value ) > 0 ) && ( ( substr( $key, 0, 4 ) == "vpc_" ) || ( substr( $key, 0, 5 ) == "user_" ) ) ) {
+					$stringHashData .= $key . "=" . $value . "&";
+				}
+			}
+		}
+		//Remove the last character "&"
+		$stringHashData = rtrim( $stringHashData, "&" );
+
+		return strtoupper( hash_hmac( 'SHA256', $stringHashData, pack( 'H*', $this->secure_secret ) ) );
+	}
+	/**
+	 * Get the OnePay pay URL for an order
+	 * AND set the queryDR cron for this transaction
+	 *
+	 * @param  WC_Order $order
+	 *
+	 * @return string
+	 */
+	public function get_pay_url( $order ) {
+		$args = array(
+			'Title'           => __( 'Napas Payment Aset', 'napas' ),
+			'vpc_Merchant'    => $this->merchant_id,
+			'vpc_AccessCode'  => $this->access_code,
+			'vpc_MerchTxnRef' => sprintf( '%1$s_%2$s', $order->get_id(), date( 'YmdHis' ) ),
+			'vpc_OrderInfo'   => substr(
+				sprintf( 'Order #%1$s - %2$s', $order->get_id(), get_home_url() ),
+				0,
+				32 ), // Limit 32 characters
+			'vpc_Amount'      => $order->get_total() * 100, // Multiplying 100 is a requirement from OnePay
+			'vpc_ReturnURL'   => $this->get_return_url( $order ),
+			'vpc_BackURL'	  =>  get_home_url(),
+			'vpc_Version'     => '2',
+			'vpc_Command'     => 'pay',
+			'vpc_Locale'      => ( 'vi' == get_locale() ) ? 'vn' : 'en',
+			'vpc_Currency'    => 'VND',
+			'vpc_TicketNo'    => $_SERVER['REMOTE_ADDR'],
+		);
+
+		// Set the queryDR cron for this transaction
+		$this->set_onepay_querydr_cron( $args['vpc_MerchTxnRef'] );
+
+		// Get the secure hash
+
+		$vpc_SecureHash = $this->create_vpc_SecureHash( $args );
+		// Add the secure hash to the args
+		$args['vpc_SecureHash'] = $vpc_SecureHash;
+		var_dump($args);
+		die();
+		$http_args              = http_build_query( $args, '', '&' );
+
+		// Log data
+		$message_log = sprintf('get_pay_url - Order ID: %1$s - http_args: %2$s', $order->get_id(), print_r($args, true) );
+		self::log( $message_log);
+		
+
+		if ( $this->testmode ) {
+			return 'https://sandbox.napas.com.vn/gateway/vpcpay.do?'.$http_args;
+		} else {
+			return 'https://napas.com.vn/gateway/vpcpay.do?' . $http_args;
+		}
+
+	}
+	 public function generateHash($data)
+    {
+        $md5HashData =  $this->access_code;
+        ksort($data);
+        foreach ($data as $key => $val) {
+            if (strlen($val) > 0) {
+                $md5HashData .= $val;
+            }
+        }
+        return strtoupper(md5($md5HashData));
+    }
+
 	public function generate_123payment_form( $order_id ) {
 			global $woocommerce;
 			$order        = new WC_Order( $order_id );
