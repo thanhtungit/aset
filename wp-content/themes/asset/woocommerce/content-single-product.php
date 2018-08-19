@@ -27,48 +27,52 @@ do_action( 'woocommerce_before_single_product' );
 if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
+  
 }
+    global $product;
+    $attributes = $product->get_available_variations();
+
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-
-	<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-		<?php
-			/**
-			 * Hook: woocommerce_single_product_summary.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
+	<div class="col-md-8 float-left">
+		<h1><?php echo woocommerce_template_single_title(); ?></h1>
+		<div class="thumb">
+			<?php  echo woocommerce_show_product_images() ?>
+		</div>
+		<div class="content">
+			<?php echo the_content(); ?>
+		</div>
 	</div>
-
-	<?php
-		/**
-		 * Hook: woocommerce_after_single_product_summary.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-	?>
+	<div class="col-md-4 float-left">
+		<div class="col-price float-left">
+    	<?php
+    	    foreach ($attributes as $key => $attribute) {
+    		  $name_variation = get_term_by('slug',$attribute['attributes']['attribute_pa_years'],'pa_years');
+    		 ?>
+    		 
+    	   <form method="post" action="">
+		        <div class="col-price-left">
+		        	<p>
+		        	  <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>	
+		        	</p>
+		            <?php echo $attribute['price_html']; ?>
+		            <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
+		           
+		            <a href="#">Free trail</a>
+		        </div>
+		        <input type="hidden" name="quantity" value="1" min="1" max="1"/>
+		        <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+				<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+				<input type="hidden" name="variation_id" class="variation_id" value="<?php echo $attribute['variation_id']; ?>" />
+			</form>
+        <?php } ?>
+        </div>
+	</div>
 </div>
-
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<section class="award">
+	<div class="container">
+		<div class="row">
+			Vào trong thư mực woocommerce/single-product/content-single-product.php để thêm phần nội dung này
+		</div>
+	</div>
+</section>
