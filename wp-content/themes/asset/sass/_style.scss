@@ -11,4 +11,20 @@ body {
     text-transform: uppercase;
     text-align: center;
   }
+  .tab-content {
+    button.btn-nod32 {
+      padding: 7px 34px;
+      font-size: 15px;
+      line-height: 18px;
+      color: #fff;
+    }
+    span.woocommerce-Price-amount {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 22px;
+      margin-bottom: 15px;
+      display: block;
+      color: #000;
+    }
+  }
 }
