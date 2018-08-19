@@ -4,11 +4,11 @@
     <div class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <h1>Find ESET Products That Suit Your Needs</h1>
-                    <a href="" class="btn-nod32">find out more</a>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 class="text-right text-md-center">Find ESET Products That Suit Your Needs</h1>
+                    <a href="" class="btn-nod32 m-md-auto">find out more</a>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 d-none d-lg-block">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/EAV_Atlas_Balanced_Box_CMYK.png" alt="">
                 </div>
             </div>
@@ -21,6 +21,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                        <div class="scroll-tab">
                     	<?php
 							$cat_args = array(
 							    'hide_empty' => $false,
@@ -47,6 +48,7 @@
 	                           <?php } ?>
 	                        </ul>
 	                       <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
