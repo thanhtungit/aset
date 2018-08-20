@@ -69,10 +69,156 @@ if ( post_password_required() ) {
         </div>
 	</div>
 </div>
-<section class="award">
+<section class="award full-container">
 	<div class="container">
 		<div class="row">
-			Vào trong thư mực woocommerce/single-product/content-single-product.php để thêm phần nội dung này
+			<div class="col-12">
+                <h3>Award-winning<br/> antivirus for Windows</h3>
+                <img src="<?php echo TEMPLATE_PATH ?>/images/logo_3.png" alt="">
+                <p>Essential defense against malware, built on ESET's trademark<br/> best balance of detection, speed and usability.</p>
+            </div>
 		</div>
 	</div>
+</section>
+<section class="rate full-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <p>Built on record-breaking anti-malware technology</p>
+            </div>
+            <div class="col-md-3">
+                <p>Built on record-breaking anti-malware technology</p>
+            </div>
+            <div class="col-md-3">
+                <p>Built on record-breaking anti-malware technology</p>
+            </div>
+            <div class="col-md-3">
+                <div class="star">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                </div>
+                <span>4.5/5 on amazon.com</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="safer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>A safer internet for you to enjoy</h3>
+                <p>Enjoy the internet, protected by the legendary ESET NOD32 Antivirus – for more than two decades, the<br/> favorite antimalware solution of IT experts and gamers</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/Group.png" alt="">
+                    <h5>Enjoy a safer internet</h5>
+                    <p>ESET NOD32 Antivirus reinforces its cutting-edge protection with Script-Based Attack Protection</p>
+                </div>
+            </div>
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/verified_user.png" alt="">
+                    <h5>No more antivirus slowdowns</h5>
+                    <p>Your computer performing at its best, with our super-efficient and fast antivirus</p>
+                </div>
+            </div>
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/game.png" alt="">
+                    <h5>Enjoy gaming and viewing</h5>
+                    <p>Play games and watch shows uninterrupted, with our special Gamer Mode</p>
+                </div>
+            </div>
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/money.png" alt="">
+                    <h5>Stay safe from ransomware</h5>
+                    <p>Blocks malware that tries to lock you out of your personal data and then asks you to pay a 'ransom' to unlock it</p>
+                </div>
+            </div>
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/magic.png" alt="">
+                    <h5>Easy to use</h5>
+                    <p>Enjoy optimized protection out of the box, or tweak your security with 150+ detailed settings</p>
+                </div>
+            </div>
+            <div class="col-md-4 box-item">
+                <div class="box-item-inner">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/phone.png" alt="">
+                    <h5>Help when you need it</h5>
+                    <p>Comes with free, industry-leading customer support, supplied locally in your language</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slider full-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>See ESET security in action</h5>
+                <div class="slick-slider">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pJwAZ93Hyyc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pJwAZ93Hyyc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="technical">
+    <h3>Cutting-edge detection technology for your protection</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box-item">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/tech_2.png" alt="">
+                    <h5>Exploit Blocker</h5>
+                    <p>Blocks attacks specifically designed to evade antivirus detection. Protects against attacks on web browsers, PDF readers and other applications, including Java-based software.</p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box-item">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/tech_3.png" alt="">
+                    <h5>ESET DNA Detections</h5>
+                    <p>Makes it possible to detect thousands of related malware variants, including new or previously unknown ones.</p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box-item">
+                    <img src="<?php echo TEMPLATE_PATH ?>/images/tech_1.png" alt="">
+                    <h5>Script-Based Attack Protection NEW</h5>
+                    <p>Detects malicious JavaScripts that can attack via your browser, and attacks by malicious scripts that try to exploit Windows PowerShell.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row more_info">
+            <div class="col-md-6">
+                <h5>More info</h5>
+                <ul class="list-unstyled d-inline">
+                    <li><a href="">Product overview (PDF)</a></li>
+                    <li><a href="">Compare Windows products</a></li>
+                    <li><a href="">Windows 10 compatibility information</a></li>
+                    <li><a href="">Convert your Username & Password to a License Key</a></li>
+                    <li><a href="">ESET Unilicense</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>System requirements</h5>
+                <p>ESET NOD32 Antivirus runs on any system with Microsoft® Windows® 10, 8.1, 8, 7, Vista, and Microsoft Windows Home Server 2011. Product requires an internet connection.</p>
+            </div>
+        </div>
+    </div>
 </section>

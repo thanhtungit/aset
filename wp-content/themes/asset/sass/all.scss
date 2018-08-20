@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'flex';
 @import "bootstrap/breakpoints";
+@import "slick";
+@import "slick-theme";
 
 @import 'font';
 @import 'style';
@@ -11,4 +13,5 @@
 @import 'pages';
 @import 'page/home';
 @import "responsive";
+@import "page/product-detail";
 
