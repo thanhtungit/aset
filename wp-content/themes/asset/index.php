@@ -35,7 +35,7 @@
 	   									 $image = wp_get_attachment_url( $thumbnail_id );
 	   									 $active = ($key == 0) ? ' active':'';
 	   									 $tab_products .='<div id="'.$cat->slug.'" class="container tab-pane '.$active.'">';
-                                         $tab_products .= do_shortcode('[products limit="-1" columns="1" orderby="menu_order" category="'.$cat->slug.'" ]');
+                                         $tab_products .= do_shortcode('[products limit="-1" columns="1" category="'.$cat->slug.'" ]');
                                          $tab_products .='</div>';
                                        
 	                        		?>

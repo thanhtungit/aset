@@ -111,6 +111,8 @@ class OnePay_Domestic extends WC_Payment_Gateway {
 	 * @return string
 	 */
 	public function get_pay_url( $order ) {
+		$amount = (get_woocommerce_currency() =='USD') ? $order->get_total() * 23000 : $order->get_total();
+
 		$args = array(
 			'Title'           => __( 'OnePay Payment Title', 'woo-viet' ),
 			'vpc_Merchant'    => $this->merchant_id,
@@ -120,7 +122,7 @@ class OnePay_Domestic extends WC_Payment_Gateway {
 				sprintf( 'Order #%1$s - %2$s', $order->get_id(), get_home_url() ),
 				0,
 				32 ), // Limit 32 characters
-			'vpc_Amount'      => $order->get_total() * 100, // Multiplying 100 is a requirement from OnePay
+			'vpc_Amount'      => $amount * 100, // Multiplying 100 is a requirement from OnePay
 			'vpc_ReturnURL'   => $this->get_return_url( $order ),
 			'vpc_Version'     => '2',
 			'vpc_Command'     => 'pay',
