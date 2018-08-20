@@ -31,7 +31,7 @@ get_header(); ?>
 	</div>
 </section>
 <section class="page-content clearfix">
-	<div class="container">
+	<div class="container-fluid">
 		 <div class="row">
 	<?php
 		/**

@@ -33,43 +33,48 @@ if ( post_password_required() ) {
     $attributes = $product->get_available_variations();
 
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-	<div class="col-md-8 float-left">
-		<h1><?php echo woocommerce_template_single_title(); ?></h1>
-		<div class="thumb">
-			<?php  echo woocommerce_show_product_images() ?>
-		</div>
-		<div class="content">
-			<?php echo the_content(); ?>
-		</div>
-	</div>
-	<div class="col-md-4 float-left">
-		<div class="col-price float-left">
-    	<?php
-    	    foreach ($attributes as $key => $attribute) {
-    		  $name_variation = get_term_by('slug',$attribute['attributes']['attribute_pa_years'],'pa_years');
-    		 ?>
-    		 
-    	   <form method="post" action="">
-		        <div class="col-price-left">
-		        	<p>
-		        	  <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>	
-		        	</p>
-		            <?php echo $attribute['price_html']; ?>
-		            <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
-		           
-		            <a href="#">Free trail</a>
-		        </div>
-		        <input type="hidden" name="quantity" value="1" min="1" max="1"/>
-		        <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
-				<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
-				<input type="hidden" name="variation_id" class="variation_id" value="<?php echo $attribute['variation_id']; ?>" />
-			</form>
-        <?php } ?>
+
+<section class="product-item container">
+    <div class="row">
+        <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
+            <div class="col-md-8 float-left">
+                <h1><?php echo woocommerce_template_single_title(); ?></h1>
+                <div class="thumb">
+                    <?php  echo woocommerce_show_product_images() ?>
+                </div>
+                <div class="content">
+                    <?php echo the_content(); ?>
+                </div>
+            </div>
+            <div class="col-md-4 float-left">
+                <div class="col-price float-left">
+                    <?php
+                    foreach ($attributes as $key => $attribute) {
+                        $name_variation = get_term_by('slug',$attribute['attributes']['attribute_pa_years'],'pa_years');
+                        ?>
+
+                        <form method="post" action="">
+                            <div class="col-price-left">
+                                <p>
+                                    <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>
+                                </p>
+                                <?php echo $attribute['price_html']; ?>
+                                <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
+
+                                <a href="#">Free trail</a>
+                            </div>
+                            <input type="hidden" name="quantity" value="1" min="1" max="1"/>
+                            <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+                            <input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+                            <input type="hidden" name="variation_id" class="variation_id" value="<?php echo $attribute['variation_id']; ?>" />
+                        </form>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
-	</div>
-</div>
-<section class="award full-container">
+    </div>
+</section>
+<section class="award">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -80,7 +85,7 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 </section>
-<section class="rate full-container">
+<section class="rate">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -159,7 +164,7 @@ if ( post_password_required() ) {
         </div>
     </div>
 </section>
-<section class="slider full-container">
+<section class="slider">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
