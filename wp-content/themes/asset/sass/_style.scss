@@ -151,9 +151,16 @@ body {
       }
     }
   }
+  .nav-breadcrumbs .woocommerce-breadcrumb {
+    padding: 0;
+  }
   .full-container {
     width: 100%;
     left: 0;
     position: absolute;
+  }
+  /* style for woocommerce */
+  .woocommerce {
+    width: 100%;
   }
 }
