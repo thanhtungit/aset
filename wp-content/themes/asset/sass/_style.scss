@@ -131,6 +131,8 @@ body {
         width: 21px;
         margin-right: 12px;
         padding: 0;
+        position: relative;
+        top: -2px;
         &:before {
           content: '\f015';
           font: normal normal normal 14px/1 FontAwesome;
@@ -162,5 +164,47 @@ body {
   /* style for woocommerce */
   .woocommerce {
     width: 100%;
+    .btn-cart {
+      border-radius: 25px;
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #8DC63F;
+      color: #fff;
+      border: 1px solid #8DC63F;
+      font-weight: normal;
+      padding: 8px 45px;
+      &:hover {
+        color: inherit;
+        background: transparent;
+      }
+    }
+    .btn-cart-back {
+      border-radius: 25px;
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: #8DC63F;
+      color: #fff;
+      border: 1px solid #8DC63F;
+      font-weight: normal;
+      padding: 8px 45px;
+      &:hover {
+        color: inherit;
+        background: transparent;
+      }
+    }
+    .title-payment {
+      color: #008BA0;
+      font-family: Helvetica;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 38px;
+      margin: 30px 0 20px;
+    }
   }
 }

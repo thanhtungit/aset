@@ -39,14 +39,17 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
+            <div class="col-12">
+                <h1 class="title-payment">Checkout</h1>
+            </div>
 			<div class="col-md-8 float-left">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				<div class="box box-payment">
-			   	  <h3><span class="number">2</span>Payment Information</h3>
+			   	  <h3 class="title-checkout"><span class="number">2</span>Payment Information</h3>
 			   	  <?php echo woocommerce_checkout_payment(); ?>
 			   </div>
 			   <div class="box box-order">
-			        <h3 id="order_review_heading"><span class="number">3</span><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
+			        <h3 class="title-checkout" id="order_review_heading"><span class="number">3</span><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
 				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
 				<div id="order_review" class="woocommerce-checkout-review-order">

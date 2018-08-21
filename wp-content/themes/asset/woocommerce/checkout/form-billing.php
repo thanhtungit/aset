@@ -23,6 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** @global WC_Checkout $checkout */
 
 ?>
+
 <div class="box box-billing">
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
@@ -31,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php else : ?>
 
-		<h3><span class="number">1</span><?php _e( 'Billing Information', 'woocommerce' ); ?></h3>
+		<h3 class="title-checkout"><span class="number">1</span><?php _e( 'Billing Information', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
 
