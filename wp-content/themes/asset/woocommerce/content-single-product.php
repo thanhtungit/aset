@@ -37,38 +37,42 @@ if ( post_password_required() ) {
 <section class="product-item container">
     <div class="row">
         <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
-            <div class="col-md-8 float-left">
+            <div class="col-12">
                 <h1><?php echo woocommerce_template_single_title(); ?></h1>
-                <div class="thumb">
-                    <?php  echo woocommerce_show_product_images() ?>
-                </div>
-                <div class="content">
-                    <?php echo the_content(); ?>
-                </div>
             </div>
-            <div class="col-md-4 float-left">
-                <div class="col-price float-left">
-                    <?php
-                    foreach ($attributes as $key => $attribute) {
-                        $name_variation = get_term_by('slug',$attribute['attributes']['attribute_pa_years'],'pa_years');
-                        ?>
+            <div class="col-lg-2 float-left col-img col-md-3 col-xs-4 col-sm-4 float-sm-none col-4 float-none">
+                <?php  echo woocommerce_show_product_images() ?>
+            </div>
+            <div class="col-lg-10 offset-lg-2 col-md-9 offset-md-3 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-lg-7">
+                        <?php echo the_content(); ?>
+                    </div>
+                    <div class="col-lg-5 col-md-9 group-buy">
+                        <div class="col-price float-left">
+                            <?php
+                            foreach ($attributes as $key => $attribute) {
+                                $name_variation = get_term_by('slug',$attribute['attributes']['attribute_pa_years'],'pa_years');
+                                ?>
 
-                        <form method="post" action="">
-                            <div class="col-price-left">
-                                <p>
-                                    <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>
-                                </p>
-                                <?php echo $attribute['price_html']; ?>
-                                <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
+                                <form method="post" action="">
+                                    <div class="col-price-left">
+                                        <p>
+                                            <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>
+                                        </p>
+                                        <?php echo $attribute['price_html']; ?>
+                                        <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
 
-                                <a href="#">Free trail</a>
-                            </div>
-                            <input type="hidden" name="quantity" value="1" min="1" max="1"/>
-                            <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
-                            <input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
-                            <input type="hidden" name="variation_id" class="variation_id" value="<?php echo $attribute['variation_id']; ?>" />
-                        </form>
-                    <?php } ?>
+                                        <a href="#">Free trail</a>
+                                    </div>
+                                    <input type="hidden" name="quantity" value="1" min="1" max="1"/>
+                                    <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+                                    <input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+                                    <input type="hidden" name="variation_id" class="variation_id" value="<?php echo $attribute['variation_id']; ?>" />
+                                </form>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,16 +92,16 @@ if ( post_password_required() ) {
 <section class="rate">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 col-xs-12">
                 <p>Built on record-breaking anti-malware technology</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 col-xs-12">
                 <p>Built on record-breaking anti-malware technology</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 col-xs-12">
                 <p>Built on record-breaking anti-malware technology</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="star">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -119,42 +123,42 @@ if ( post_password_required() ) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/Group.png" alt="">
                     <h5>Enjoy a safer internet</h5>
                     <p>ESET NOD32 Antivirus reinforces its cutting-edge protection with Script-Based Attack Protection</p>
                 </div>
             </div>
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/verified_user.png" alt="">
                     <h5>No more antivirus slowdowns</h5>
                     <p>Your computer performing at its best, with our super-efficient and fast antivirus</p>
                 </div>
             </div>
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/game.png" alt="">
                     <h5>Enjoy gaming and viewing</h5>
                     <p>Play games and watch shows uninterrupted, with our special Gamer Mode</p>
                 </div>
             </div>
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/money.png" alt="">
                     <h5>Stay safe from ransomware</h5>
                     <p>Blocks malware that tries to lock you out of your personal data and then asks you to pay a 'ransom' to unlock it</p>
                 </div>
             </div>
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/magic.png" alt="">
                     <h5>Easy to use</h5>
                     <p>Enjoy optimized protection out of the box, or tweak your security with 150+ detailed settings</p>
                 </div>
             </div>
-            <div class="col-md-4 box-item">
+            <div class="col-lg-4 col-md-6 col-xs-12 box-item">
                 <div class="box-item-inner">
                     <img src="<?php echo TEMPLATE_PATH ?>/images/phone.png" alt="">
                     <h5>Help when you need it</h5>

@@ -107,6 +107,7 @@
       .actions {
         padding: 16px 20px;
         .coupon {
+          margin-bottom: 15px;
           p {
             color: #212B36;
             font-family: "SF Pro Text", sans-serif;
@@ -156,11 +157,14 @@
         }
       }
       td.text-right {
-        padding: 16px 20px;
+        padding: 16px 20px 0;
         a.button:last-of-type {
           background-color: #8DC63F;
           color: #fff;
           border: 1px solid #8DC63F;
+        }
+        a {
+          margin-bottom: 16px;
         }
       }
     }
@@ -204,5 +208,10 @@
       color: inherit;
       background: transparent;
     }
+  }
+
+  /* remove title td:before on mobile */
+  td:before {
+    content: none !important;
   }
 }

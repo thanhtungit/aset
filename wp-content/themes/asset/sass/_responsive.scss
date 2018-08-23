@@ -6,21 +6,80 @@
 /* ================================== min-width 768px and max-width 992px ===============*/
 @media (min-width: 768px) and (max-width: 992px) {
   header {
-    padding: 10px 0 0;
+    padding: 10px 0 10px;
   }
   .page.home .tab-products .tab-content .tab-pane .product-item .col-content, .page.home .tab-products .tab-content .tab-pane .product-item .col-price {
     width: 100%;
-    padding-right: 26px;
+  }
+  body .page.home {
+    .tab-products .tab-content {
+      .product.product_cat-windows {
+        display: block;
+        .float-left.col-price {
+          margin-left: 0;
+        }
+        .float-left.col-content {
+          width: 82%;
+        }
+      }
+    }
   }
 }
 /*  ================================  min-width 640px and max-width 768px =====================================*/
 @media (min-width: 640px) and (max-width: 768px) {
   header {
-    padding: 10px 0 0;
+    padding: 10px 0 10px;
   }
   .page.home .tab-products .tab-content .tab-pane .product-item .col-content, .page.home .tab-products .tab-content .tab-pane .product-item .col-price {
     width: 100%;
     padding-right: 26px;
+  }
+  body .page.home {
+    .tab-products .tab-content {
+      .product.product_cat-windows {
+        display: block;
+        .float-left.col-price {
+          margin-left: 0;
+        }
+        .float-left.col-content {
+          width: 82%;
+        }
+      }
+    }
+  }
+  .single-product.woocommerce-page .page-content .rate .col-md-6 {
+    .star {
+      margin: 0;
+    }
+    span {
+      text-align: left;
+    }
+  }
+  .single-product.woocommerce-page .page-content .technical .box-item {
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .single-product.woocommerce-page .page-content .technical .more_info {
+    margin-top: 0;
+  }
+  .woocommerce-cart.woocommerce-page {
+    .woocommerce {
+      table.shop_table {
+        .actions {
+          background: transparent;
+          .total_price {
+            float: none;
+            margin-left: auto;
+          }
+          .coupon {
+            button {
+              margin-top: 15px;
+              float: left;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -33,7 +92,7 @@
     display: block !important;
   }
   header {
-    padding: 10px 0 0;
+    padding: 10px 0 10px;
     .menu-main {
       margin: 0;
     }
@@ -48,6 +107,16 @@
       .container {
         .row {
           top: 55%;
+        }
+      }
+    }
+  }
+  body .page.home {
+    .tab-products .tab-content {
+      .product.product_cat-windows {
+        display: block;
+        .float-left.col-price {
+          margin-left: 0;
         }
       }
     }
