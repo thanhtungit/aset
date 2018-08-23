@@ -22,6 +22,7 @@ if ( ! is_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
+    <p class="notice-text">Select payment method</p>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
@@ -34,19 +35,20 @@ if ( ! is_ajax() ) {
 			}
 			?>
 		</ul>
-		<p>You will de redirected to the payment website</p>
+		<p class="notice-text">You will de redirected to the payment website</p>
 	<?php endif; ?>
+    <hr>
 	<div class="form-row place-order">
 
 		<noscript>
 			<?php esc_html_e( 'Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'woocommerce' ); ?>
 			<br/><button type="submit" class="button alt" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update totals', 'woocommerce' ); ?>"><?php esc_html_e( 'Update totals', 'woocommerce' ); ?></button>
 		</noscript>
-		
+
 
 		<?php //wc_get_template( 'checkout/terms.php' ); ?>
-		<div class="col-md-2"><button class="btn btn-back button alt">Back</button></div>
-        <div class="col-md-2"><button class="btn btn-continue button alt">Continue</button></div>
+		<button class="btn btn-back button alt btn-cart-back">Back</button>
+        <button class="btn btn-continue button alt  btn-cart">Continue</button>
 
 	</div>
 </div>

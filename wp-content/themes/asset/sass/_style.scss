@@ -171,9 +171,9 @@ body {
       line-height: 18px;
       text-align: center;
       text-transform: uppercase;
-      background-color: #8DC63F;
+      background-color: #8DC63F !important;
       color: #fff;
-      border: 1px solid #8DC63F;
+      border: 1px solid #8DC63F !important;
       font-weight: normal;
       padding: 8px 45px;
       &:hover {
@@ -182,15 +182,15 @@ body {
       }
     }
     .btn-cart-back {
+      border: 1px solid #979797 !important;
       border-radius: 25px;
+      color: #637381 !important;
       font-family: Helvetica;
       font-size: 15px;
       line-height: 18px;
       text-align: center;
       text-transform: uppercase;
-      background-color: #8DC63F;
-      color: #fff;
-      border: 1px solid #8DC63F;
+      background: transparent !important;
       font-weight: normal;
       padding: 8px 45px;
       &:hover {

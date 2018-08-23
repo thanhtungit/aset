@@ -56,7 +56,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 					<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); // @codingStandardsIgnoreLine ?>
+		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn-cart btn-finish" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); // @codingStandardsIgnoreLine ?>
 
 				<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 				</div>
@@ -64,32 +64,31 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			    </div>
 			</div>
 
-			<div class="col-md-4 float-left">
-				<table>
-			 		<tr>
-						<td><?php _e( 'Subtotal', 'woocommerce' ); ?></td>
-						<td><?php wc_cart_totals_subtotal_html(); ?></td>	
-					</tr>
-				<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-					<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-						<td>Discount codes: <?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-						<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
-					</tr>
-				<?php endforeach; ?>
-					<tr>
-						<th><?php _e( 'Grand Total', 'woocommerce' ); ?></th>
-						<td><?php wc_cart_totals_order_total_html(); ?></td>
-					</tr>
-					<tr>
-				      <td colspan="2">
-				      	<p>Billing Information</p>
-				      	Tung Ken <br/>
-				      	whynot020689@gmail.com<br/>
-				      	10 Điện Biên Phủ, p5. Q.10 Việt Nam<br/>
-				      	Phone: 012323232
-				      </td>		
-					</tr>
-			</table>
+			<div class="col-md-4 float-left col-added">
+                <div class="row-top">
+                    <div class="row-subtotal">
+                        <span><?php _e( 'Subtotal', 'woocommerce' ); ?></span>
+                        <span><?php wc_cart_totals_subtotal_html(); ?></span>
+                    </div>
+                    <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
+                        <div class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+                            <span>Discount codes:&nbsp;&nbsp;&nbsp;<strong><?php wc_cart_totals_coupon_label( $coupon ); ?></strong></span>
+                            <span><?php wc_cart_totals_coupon_html( $coupon ); ?></span>
+                        </div>
+                    <?php endforeach; ?>
+                    <hr>
+                    <div class="row-grand">
+                        <span><?php _e( 'Grand Total', 'woocommerce' ); ?></span>
+                        <span><?php wc_cart_totals_order_total_html(); ?></span>
+                    </div>
+                </div>
+                <div class="row-name">
+                    <span>Billing Information</span>
+                    <span>Tung Ken<br/>
+                    whynot020689@gmail.com<br/>
+                    10 Điện Biên Phủ, p5. Q.10 Việt Nam<br/>
+                    Phone: 012323232<span>
+                </div>
 			</div>
 		</div>
 

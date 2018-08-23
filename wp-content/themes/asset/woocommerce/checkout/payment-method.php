@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<input id="payment_method_<?php echo $gateway->id; ?>" type="radio" class="input-radio" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
 
 	<label for="payment_method_<?php echo $gateway->id; ?>">
+        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
 		<?php echo $gateway->get_title(); ?> <?php echo $gateway->get_icon(); ?>
 	</label>
 	<?php if ( $gateway->has_fields() || $gateway->get_description() ) : ?>
