@@ -342,3 +342,69 @@
     }
   }
 }
+/* order-success */
+.order-success {
+  h3 {
+    color: #008BA0;
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 38px;
+    margin: 30px 0 20px;
+    &.woocommerce-order-details__title {
+      color: #454F5B;
+      font-family: Helvetica;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+      margin-bottom: 8px;
+    }
+  }
+  ul.order_details {
+    padding: 15px 15px 0 15px;
+    display: table;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    li {
+      margin-bottom: 15px;
+      border-right: 1px solid rgba(0,0,0,.1);
+    }
+    strong {
+      font-weight: normal;
+    }
+  }
+  table.order_details tfoot, table.order_details tbody, table.order_details thead {
+    th {
+      color: #637381;
+      font-family: Helvetica;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+    }
+    tr {
+      color: #212B36;
+      font-family: Helvetica;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    td, strong {
+      font-weight: normal;
+    }
+    td, th {
+      border: none
+    }
+    .product-name a {
+      color: #008BA0;
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+  }
+  .shop_table {
+    border-collapse: collapse !important;
+    tr {
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 body {
   position: relative;
   min-width: 480px;
+  font-family: Helvetica;
   a:hover {
     text-decoration: none;
   }
@@ -55,7 +56,7 @@ body {
         &.col-img {
           padding-left: 26px;
           margin-right: 0 !important;
-          width: 118px;
+          width: 144px;
           text-align: center;
           a {
             color: #008BA0;
