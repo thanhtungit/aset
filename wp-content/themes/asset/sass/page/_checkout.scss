@@ -96,11 +96,8 @@
         color: #008BA0;
       }
     }
-    span {
+    span.woocommerce-input-wrapper {
       width: 100%;
-      &.select2-selection__rendered {
-        line-height: 36px;
-      }
       input {
         height: 36px;
         width: 100%;
@@ -109,6 +106,14 @@
         background-color: #FFFFFF;
         color: #637381;
         padding: 9px 0 9px 12px;
+      }
+    }
+    span.select2-container {
+      line-height: 36px;
+      .select2-selection, .select2-selection__rendered, .select2-selection__arrow {
+        height: 36px;
+        line-height: 36px;
+        outline: none;
       }
     }
   }
@@ -338,6 +343,11 @@
         font-family: Helvetica;
         font-size: 15px;
         line-height: 20px;
+      }
+    }
+    .row-grand {
+      span {
+        font-weight: bold;
       }
     }
   }
