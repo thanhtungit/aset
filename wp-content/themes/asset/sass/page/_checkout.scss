@@ -57,9 +57,8 @@
     padding: 0 !important;
     margin-bottom: 15px;
     width: 47%;
-    float: left;
     &.form-row-wide {
-      clear: none;
+      width: 100%;
     }
     &.address-field:not(.update_totals_on_change) {
       margin-right: 0;
@@ -79,9 +78,12 @@
         }
       }
     }
-    &:nth-child(even) {
+    &.form-row-last {
       margin-right: 0;
       float: right;
+    }
+    &.form-row-first {
+      float: left;
     }
     label {
       color: #637381;
@@ -110,6 +112,7 @@
     }
     span.select2-container {
       line-height: 36px;
+      height: 36px;
       .select2-selection, .select2-selection__rendered, .select2-selection__arrow {
         height: 36px;
         line-height: 36px;
