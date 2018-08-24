@@ -72,7 +72,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                     </div>
                     <?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
                         <div class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-                            <span>Discount codes:&nbsp;&nbsp;&nbsp;<strong><?php wc_cart_totals_coupon_label( $coupon ); ?></strong></span>
+                            <span>Discount codes:&nbsp;&nbsp;&nbsp;<strong class="text-uppercase"><?php wc_cart_totals_coupon_label( $coupon ); ?></strong></span>
                             <span><?php wc_cart_totals_coupon_html( $coupon ); ?></span>
                         </div>
                     <?php endforeach; ?>
