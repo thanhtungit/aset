@@ -58,9 +58,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
         <?php echo apply_filters( 'woocommerce_short_description', $product->post->post_excerpt ); ?>
     </div>
     <?php 
-
       $attributes = $product->get_available_variations();
 	  if($attributes){
+	  		 $fclass = (count($attributes) > 1) ? 'col-price-left' :'col-price-right';
        ?>
     <div class="col-price float-left">
     	<?php
@@ -69,7 +69,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     		 ?>
     		 
     	   <form method="post" action="">
-		        <div class="col-price-left">
+		        <div class="<?php echo $fclass; ?>">
 		        	<p>
 		        	  <?php echo ($name_variation) ? $name_variation->name:'No Title'; ?>	
 		        	</p>

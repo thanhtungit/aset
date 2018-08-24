@@ -40,14 +40,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="woocommerce-billing-fields__field-wrapper">
 		<?php
+			//$fields = $checkout->get_checkout_fields( 'billing' );
+			// $fields = array(
+			//     "billing_first_name",
+			//     "billing_last_name",
+			//    	"billing_email",
+			//    	"billing_phone",
+			//     "billing_address_1",
+			//     "billing_city",
+			//     "billing_state",
+			//     "billing_postcode",
+			//     "billing_country"		   
+			// );
+
+			// foreach ( $fields as $key ) {
+			//  woocommerce_form_field( $key, $checkout->checkout_fields['billing'][$key], $checkout->get_value( $key ) );
+			// }
+
 			$fields = $checkout->get_checkout_fields( 'billing' );
 
 			foreach ( $fields as $key => $field ) {
 				if ( isset( $field['country_field'], $fields[ $field['country_field'] ] ) ) {
-					$field['country'] = $checkout->get_value( $field['country_field'] );
+					//$field['country'] = $checkout->get_value( $field['country_field'] );
 				}
 				woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
 			}
+	
 		?>
 	</div>
 

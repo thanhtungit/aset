@@ -1,0 +1,24 @@
+DEBUG   |180610 16:23:53| -- Resetting Akeeba Engine factory (backend.id1)
+DEBUG   |180610 16:23:53|Fetching filter data from database
+DEBUG   |180610 16:23:53|Loading filters
+DEBUG   |180610 16:23:53|-- Loading filter Directories
+DEBUG   |180610 16:23:53|-- Loading filter Files
+DEBUG   |180610 16:23:53|-- Loading filter Incremental
+DEBUG   |180610 16:23:53|-- Loading filter Regextabledata
+DEBUG   |180610 16:23:53|-- Loading filter Regextables
+DEBUG   |180610 16:23:53|-- Loading filter Skipdirs
+DEBUG   |180610 16:23:53|-- Loading filter Skipfiles
+DEBUG   |180610 16:23:53|-- Loading filter Tabledata
+DEBUG   |180610 16:23:53|-- Loading filter Tables
+DEBUG   |180610 16:23:53|-- Loading filter ExcludeErrorLogs
+DEBUG   |180610 16:23:53|-- Loading filter ExcludeFiles
+DEBUG   |180610 16:23:53|-- Loading filter HostingFolders
+DEBUG   |180610 16:23:53|-- Loading filter InstallationDirectory
+DEBUG   |180610 16:23:53|-- Loading filter OSThumbnailCacheFiles
+DEBUG   |180610 16:23:53|-- Loading filter OutputSkipFiles
+DEBUG   |180610 16:23:53|-- Loading filter OutputSkipSubdirectories
+DEBUG   |180610 16:23:53|-- Loading filter SiteDatabase
+DEBUG   |180610 16:23:53|-- Loading filter SiteRoot
+DEBUG   |180610 16:23:54|Loading optional filters
+DEBUG   |180610 16:23:54|-- Loading optional filter Stack\StackErrorlogs
+DEBUG   |180610 16:23:54|-- Loading optional filter Stack\StackHoststats
