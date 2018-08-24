@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<tbody>
 		<?php
@@ -69,7 +70,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</tbody>
 </table>
 <div class="table_last">
-
 <div class="cart-subtotal">
     <p><?php _e( 'Subtotal', 'woocommerce' ); ?></p>
     <p><?php wc_cart_totals_subtotal_html(); ?></p>
@@ -115,13 +115,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php endif; ?>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
+<?php //do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 <div class="order-total">
     <p><strong><?php _e( 'Total', 'woocommerce' ); ?></strong></p>
     <p><?php wc_cart_totals_order_total_html(); ?></p>
 </div>
 
-<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
+<?php //do_action( 'woocommerce_review_order_after_order_total' ); ?>
 
 </div>
