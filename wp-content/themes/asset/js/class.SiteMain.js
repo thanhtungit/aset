@@ -33,6 +33,9 @@ var SiteMain = (function() {
             prevArrow: '<i class="fa fa-chevron-left arr-prev" aria-hidden="true"></i>'
         })
     }
+    function detect_class_country() {
+
+    }
     //RETURN
     return {
         init:init
