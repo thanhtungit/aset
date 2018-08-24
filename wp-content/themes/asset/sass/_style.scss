@@ -4,6 +4,13 @@ body {
   a:hover {
     text-decoration: none;
   }
+  /* remove outline button */
+  button {
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
   .btn-nod32 {
     padding: 13px 32px;
     border-radius: 25px;
