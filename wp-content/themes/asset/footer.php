@@ -33,15 +33,21 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-4">
-                    <img src="<?php echo TEMPLATE_PATH ?>/images/Bitmap.png" alt="">
+                    <div class="same-height d-flex align-items-center">
+                        <img src="<?php echo TEMPLATE_PATH ?>/images/Bitmap.png" alt="">
+                    </div>
                     <p>ESET makes the only product to ever pass the magical threshold of 100 VB100 Awards by Virus Bulletin.</p>
                 </div>
                 <div class="col-md-4">
-                    <img src="<?php echo TEMPLATE_PATH ?>/images/10101010.png" alt="">
+                    <div class="same-height d-flex align-items-center">
+                        <img src="<?php echo TEMPLATE_PATH ?>/images/10101010.png" alt="">
+                    </div>
                     <p>The first virus discovered by ESET's founders Peter Paško and Miroslav Trnka in 1987 was dubbed "Vienna".</p>
                 </div>
                 <div class="col-md-4">
-                    <img src="<?php echo TEMPLATE_PATH ?>/images/egyptian.png" alt="">
+                    <div class="same-height d-flex align-items-center">
+                        <img src="<?php echo TEMPLATE_PATH ?>/images/egyptian.png" alt="">
+                    </div>
                     <p>The company was named after the ancient Egyptian goddess and magical healer Eset.</p>
                 </div>
             </div>

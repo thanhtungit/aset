@@ -1,6 +1,9 @@
 body {
   position: relative;
   min-width: 480px;
+  a:hover {
+    text-decoration: none;
+  }
   .btn-nod32 {
     padding: 13px 32px;
     border-radius: 25px;

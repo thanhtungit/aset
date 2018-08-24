@@ -107,8 +107,14 @@
       text-align: center;
       margin-bottom: 38px;
     }
+    .same-height {
+      height: 107px;
+      display: table;
+      width: 100%;
+    }
     img {
-      margin-bottom: 20px;
+      display: table-cell;
+      margin: 0 auto 20px;
     }
     p {
       color: #FFFFFF;
