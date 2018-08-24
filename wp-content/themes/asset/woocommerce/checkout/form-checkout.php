@@ -82,14 +82,29 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                         <span><?php wc_cart_totals_order_total_html(); ?></span>
                     </div>
                 </div>
+                <?php if(is_user_logged_in()){  ?>
                 <div class="row-name">
                     <span>Billing Information</span>
-                    <span>Tung Ken<br/>
-                    whynot020689@gmail.com<br/>
-                    10 Điện Biên Phủ, p5. Q.10 Việt Nam<br/>
-                    Phone: 012323232<span>
+                    <?php
+                		$customer_id = get_current_user_id();
+					    $get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
+							'billing' => __( 'Billing address', 'woocommerce' ),
+							'shipping' => __( 'Shipping address', 'woocommerce' ),
+						), $customer_id );
+						$current_user = wp_get_current_user();
+						echo '<span>'.$current_user->user_email.'</span><br/>';
+					   foreach ( $get_addresses as $name => $title ) { ?>
+                          <address><?php
+							$address = wc_get_account_formatted_address( $name );
+							echo $address;
+						?></address>
+					   	<?php 
+					   		}
+                     ?>
+       
                 </div>
-			</div>
+                <?php } ?>
+			  </div>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
