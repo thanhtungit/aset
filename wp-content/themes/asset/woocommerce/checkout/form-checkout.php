@@ -99,3 +99,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<style type="text/css">
+	.woocommerce-checkout .woocommerce form .form-row#billing_postcode_field{
+		float: left;
+	}
+	.woocommerce-checkout .woocommerce form .form-row#billing_country_field{
+		float: right;
+	}
+</style>
