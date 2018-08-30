@@ -47,8 +47,8 @@ if ( ! is_ajax() ) {
 
 
 		<?php //wc_get_template( 'checkout/terms.php' ); ?>
-		<button class="btn btn-back button alt btn-cart-back">Back</button>
-        <button class="btn btn-continue button alt  btn-cart">Continue</button>
+		<button type="button" class="btn btn-back button alt btn-cart-back" onclick="main.backBilling()">Back</button>
+        <button type="button" class="btn btn-continue button alt  btn-cart" onclick="main.nextOrder()">Continue</button>
 
 	</div>
 </div>

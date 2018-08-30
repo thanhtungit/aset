@@ -44,6 +44,7 @@ function order_fields($fields)
    // $fields['billing']['billing_city']['priority']       = 6;
     $fields['billing']['billing_state']['class']      = ['form-row-last'];
     $fields['billing']['billing_state']['label'] ='State/Provice'; 
+    $fields['billing']['billing_state']['required'] = false; 
    // $fields['billing']['billing_postcode']['priority']   = 8;
     $fields['billing']['billing_postcode']['class']       =  ['form-row-first'];
     $fields['billing']['billing_country']['class']       =  ['form-row-last'];

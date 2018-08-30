@@ -1,4 +1,5 @@
 <?php
+include_once 'inc/register.php';
 include_once 'inc/filter-woo.php';
 //include_once 'payment/123PaymentGateway.php';
 include_once 'payment/class-onepay.php';
@@ -45,10 +46,12 @@ function tk_add_scripts_styles(){
     wp_enqueue_script('tk-slick-js',TEMPLATE_PATH.'/js/libs/slick.min.js',array('jquery'));
     wp_enqueue_script('tk-main-site',TEMPLATE_PATH.'/js/class.SiteMain.js',array('jquery'));
     wp_enqueue_script('tk-main',TEMPLATE_PATH.'/js/main.js',array('jquery','tk-main-site'));
+    wp_enqueue_script('tk-validate',TEMPLATE_PATH.'/js/libs/jquery.validate.min.js',array('jquery','tk-main-site'));
     wp_localize_script('tk-main-vars','TK_VARS',$vars);
     wp_enqueue_style('tk-bootstrap', TEMPLATE_PATH . '/css/libs/bootstrap.min.css', array(), false, 'all');
     wp_enqueue_style('tk-bootstrap-css', TEMPLATE_PATH . '/js/libs/font-awesome/css/font-awesome.min.css', array(), false, 'all');
     wp_enqueue_style('tk-main-css', TEMPLATE_PATH . '/css/all.css', array(), false, 'all');
+    wp_enqueue_style('tk-style-css', TEMPLATE_PATH . '/css/style.css', array(), false, 'all');
 }
 add_action('wp_enqueue_scripts', 'tk_add_scripts_styles');
 

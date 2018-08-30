@@ -1,0 +1,37 @@
+.hide{
+	display:none;
+}
+.woocommerce-checkout .woocommerce #checkoutForm input.error{
+   border:1px solid red;
+}
+.woocommerce-checkout .woocommerce #checkoutForm label.error{
+   color:red;
+}
+.woocommerce-checkout .woocommerce #checkoutForm .step{
+	color:#454F5B;
+	font-size:18px;
+	margin-left: 20px;
+}
+.woocommerce-checkout .woocommerce #checkoutForm .step .num{
+    height: 26px;
+    width: 26px;
+    background-color: #919EAB;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius:50%;
+}
+.woocommerce-checkout .woocommerce #checkoutForm .note{
+  padding-left:15px;
+}
+.woocommerce-checkout .woocommerce #checkoutForm .btn-footer{
+   border-top: 1px solid #C4CDD5;
+}
+.woocommerce-checkout .woocommerce #checkoutForm .btn-footer .btn{
+	float: right;
+    margin:15px;
+}
+.woocommerce-checkout .box-payment{
+	margin-bottom:20px;
+}

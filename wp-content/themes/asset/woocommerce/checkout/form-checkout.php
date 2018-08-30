@@ -27,44 +27,45 @@ wc_print_notices();
 // If checkout registration is disabled and not logged in, the user cannot checkout
 if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
 	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) );
+
 	return;
-}
-
-?>
-
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
-
-	<?php if ( $checkout->get_checkout_fields() ) : ?>
-
-		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
-
-		<div class="col2-set" id="customer_details">
+}?>
+<div class="col2-set" id="customer_details">
             <div class="col-12">
                 <h1 class="title-payment">Checkout</h1>
             </div>
-			<div class="col-md-8 float-left">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-				<div class="box box-payment">
-			   	  <h3 class="title-checkout"><span class="number">2</span>Payment Information</h3>
-			   	  <?php echo woocommerce_checkout_payment(); ?>
-			   </div>
-			   <div class="box box-order">
-			        <h3 class="title-checkout" id="order_review_heading"><span class="number">3</span><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
-				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-				<div id="order_review" class="woocommerce-checkout-review-order">
-					<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-					<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
-
-		<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn-cart btn-finish" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); // @codingStandardsIgnoreLine ?>
-
-				<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+            <div class="col-md-8 float-left">
+			  <form id="checkoutForm" name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+			  	<p id="step-1" class="step title-step hide"><span class="num">1</span> Billing Information</p>
+                <?php do_action( 'woocommerce_checkout_billing' ); ?>
+			   <?php if ( $checkout->get_checkout_fields() ) : ?>
+			   	<p id="step-2" class="step title-step"><span class="num">2</span> Payment Information</p>
+				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+				<div class="box box-payment hide" id="box-payment-form">
+					<h3 class="title-checkout"><span class="number">2</span>Payment Information</h3>
+					<?php echo woocommerce_checkout_payment(); ?>
 				</div>
-				<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-			    </div>
-			</div>
+				<p id="step-3" class="step title-step"><span class="num">2</span> Order Review</p>
+				<div class="box box-order hide" id="box-order-form">
+					  <h3 class="title-checkout" id="order_review_heading"><span class="number">3</span><?php _e( 'Order Review', 'woocommerce' ); ?></h3>
+						<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-			<div class="col-md-4 float-left col-added">
+						<div id="order_review" class="woocommerce-checkout-review-order">
+							<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+							<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+
+					<?php
+					 echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn-cart btn-finish" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); 
+					 ?>
+					  <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
+						</div>
+				<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+				<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+			<?php endif; ?>
+		    </div>
+		  </form>
+		</div>
+		<div class="col-md-4 float-left col-added">
                 <div class="row-top">
                     <div class="row-subtotal">
                         <span><?php _e( 'Subtotal', 'woocommerce' ); ?></span>
@@ -82,8 +83,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                         <span><?php wc_cart_totals_order_total_html(); ?></span>
                     </div>
                 </div>
-                <?php if(is_user_logged_in()){  ?>
-                <div class="row-name">
+               
+                <div class="row-name" id="user-billing-info">
+                	 <?php if(is_user_logged_in()){  ?>
                     <span>Billing Information</span>
                     <?php
                 		$customer_id = get_current_user_id();
@@ -100,20 +102,18 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 						?></address>
 					   	<?php 
 					   		}
-                     ?>
-       
+       			        } 
+       			   ?>
                 </div>
-                <?php } ?>
+              
 			  </div>
 		</div>
+</div>
 
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-	<?php endif; ?>
 
-</form>
 
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php //do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
 <style type="text/css">
 	.woocommerce-checkout .woocommerce form .form-row#billing_postcode_field{
 		float: left;
