@@ -7,10 +7,11 @@
 .woocommerce-checkout .woocommerce #checkoutForm label.error{
    color:red;
 }
-.woocommerce-checkout .woocommerce #checkoutForm .step{
+.woocommerce-checkout .woocommerce #checkoutForm .step {
 	color:#454F5B;
 	font-size:18px;
 	margin-left: 20px;
+    margin-bottom: 30px;
 }
 .woocommerce-checkout .woocommerce #checkoutForm .step .num{
     height: 26px;

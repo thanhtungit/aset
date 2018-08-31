@@ -1,0 +1,17 @@
+2018-08-31T05:47:06+00:00 INFO get_pay_url - Order ID: 41 - http_args: Array
+(
+    [Title] => OnePay Payment Title
+    [vpc_Merchant] => ONEPAY
+    [vpc_AccessCode] => D67342C2
+    [vpc_MerchTxnRef] => 41_20180831054705
+    [vpc_OrderInfo] => Order #41 - http://localhost:808
+    [vpc_Amount] => 3999
+    [vpc_ReturnURL] => http://localhost:8080/source/2018/freelancer/BE/aset/checkout/order-received/41/?key=wc_order_5b88d6558c921
+    [vpc_Version] => 2
+    [vpc_Command] => pay
+    [vpc_Locale] => en
+    [vpc_Currency] => VND
+    [vpc_TicketNo] => ::1
+    [vpc_SecureHash] => 6B38013BEEE8713B942BB54B1560531A2865A43E4382DD4BCBB95CDEFAFEC97F
+)
+

@@ -52,7 +52,12 @@ var main = {
 	  	   var txt = `<span>Billing Information</span><span>${first_name} ${last_name}</span><br/><span>${email}</span><br/>
 	  	   <span>${address}</span><br/><span>Phone: ${phone}</span>`;
 	  	   $('#user-billing-info').html(txt);
+          $('#customer_details').removeClass('valid_false')
+          $('#customer_details').addClass('valid_true')
 	    }
+	    else {
+	    	$('#customer_details').addClass('valid_false')
+	  }
 	  
 	},
 	backBilling: function(){
