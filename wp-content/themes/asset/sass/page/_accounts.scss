@@ -1,0 +1,93 @@
+.woocommerce-account {
+  .woocommerce-form {
+    position: relative;
+    h2 {
+      color: #454F5B;
+      font-family: Helvetica;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
+    hr {
+      margin: 15px 0;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      background: #DFE3E8;
+      margin-top: -17px;
+    }
+    p, label, .notification {
+      color: #637381;
+      font-family: Helvetica;
+      font-size: 14px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      display: block;
+      padding: 0;
+    }
+    p a {
+      color: #008BA0;
+    }
+    .lost_password {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      a {
+        color: #008BA0;
+        font-family: Helvetica;
+        font-size: 15px;
+        line-height: 20px;
+      }
+      span {
+        margin-bottom: 0;
+      }
+    }
+    .form-row-btn {
+      .woocommerce-form__label-for-checkbox {
+        margin-left: 20px;
+        input {
+          visibility: hidden;
+          margin-right: 15px;
+          &:checked ~ span {
+
+            &:before {
+              border: 1px solid #008BA0;
+            }
+            &:after {
+              color: #008BA0;
+            }
+          }
+        }
+        span.d-inline {
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            height: 16px;
+            left: -30px;
+            top: 0;
+            width: 16px;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+            box-shadow: 0 1px 1px 0 rgba(97,121,133,0.05), 0 1px 1px 0 rgba(64,82,88,0.03), 0 0 0 1px rgba(64,82,88,0.15);
+          }
+          &:after {
+            content: '\f00c';
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            color: #fff;
+            position: absolute;
+            left: -29px;
+            top: 2px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .col-lg-6 .col-12 {
+    padding: 0;
+  }
+}
