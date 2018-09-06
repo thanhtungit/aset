@@ -32,7 +32,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }?>
 <div class="col2-set" id="customer_details">
             <div class="col-12">
-                <h1 class="title-payment">Checkout</h1>
+                <h1 class="title-woocommerce">Checkout</h1>
             </div>
             <div class="col-md-8 float-left">
 			  <form id="checkoutForm" name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
@@ -113,7 +113,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 							<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
 
 					<?php
-					 echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn-cart btn-finish" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' ); 
+					 echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt btn-cart btn-finish" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">' . esc_html('Finish' ) . '</button>' );
 					 ?>
 					  <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 						</div>
@@ -141,7 +141,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                         <span><?php wc_cart_totals_order_total_html(); ?></span>
                     </div>
                 </div>
-               
+
                 <div class="row-name" id="user-billing-info">
                 	 <?php if(is_user_logged_in()){  ?>
                     <span>Billing Information</span>
@@ -158,12 +158,12 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 							$address = wc_get_account_formatted_address( $name );
 							echo $address;
 						?></address>
-					   	<?php 
+					   	<?php
 					   		}
-       			        } 
+       			        }
        			   ?>
                 </div>
-              
+
 			  </div>
 		</div>
 </div>
