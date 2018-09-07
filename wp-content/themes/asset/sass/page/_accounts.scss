@@ -1,6 +1,9 @@
-.woocommerce-account {
-  .woocommerce-form {
+.woocommerce {
+  form.woocommerce-form {
     position: relative;
+    border: 0;
+    margin: 0;
+    padding: 0;
     h2 {
       color: #454F5B;
       font-family: Helvetica;
@@ -8,14 +11,11 @@
       line-height: 24px;
       margin-bottom: 35px;
     }
-    hr {
-      margin: 15px 0;
-      position: absolute;
-      width: 100%;
-      left: 0;
-      right: 0;
-      background: #DFE3E8;
-      margin-top: -17px;
+    .box-content {
+      padding: 13px 20px 20px;
+      .btn-cart {
+        margin: 0 !important;
+      }
     }
     p, label, .notification {
       color: #637381;

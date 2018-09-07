@@ -9,6 +9,7 @@ section.page {
     }
     .shadowBox {
         border-radius: 3px;	background-color: #FFFFFF;	box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+        margin-bottom: 30px;
     }
     .box-header {
         border-bottom: 1px solid #DFE3E8;
@@ -26,11 +27,11 @@ section.page {
             margin-bottom: 0;
             color: #637381;	font-family: Helvetica;	font-size: 14px;	line-height: 20px;
         }
-        .btn-nod32 {
+        .btn-cart {
             margin-top: 20px!important;
             margin-bottom: 25px!important;
-                display: inline-block;
-                margin-left: 21px!important;
+            display: inline-block;
+            margin-left: 21px!important;
         }
     }
 }

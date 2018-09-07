@@ -4,7 +4,7 @@ body {
   font-family: Helvetica;
   a:hover {
     text-decoration: none;
-  } 
+  }
   /* remove outline button */
   button {
     outline: none;
@@ -174,7 +174,7 @@ body {
     position: absolute;
   }
   /* style for woocommerce */
-  .woocommerce {
+  .woocommerce, &.page-template {
     width: 100%;
     .btn-cart {
       border-radius: 25px;
