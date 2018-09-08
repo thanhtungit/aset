@@ -1,3 +1,5 @@
+ <?php if(is_home() || is_single()){ ?>
+
  <section class="page home brands">
  	 <!--Brand-->
     <div class="brand">
@@ -54,6 +56,7 @@
         </div>
     </div>
  </section>
+<?php } ?>
  <footer>
     <div class="container">
         <div class="row">
