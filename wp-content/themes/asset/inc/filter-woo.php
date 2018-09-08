@@ -56,5 +56,20 @@ function order_fields($fields)
     return $fields;
 }
 
+function wpb_woo_my_account_order() {
+ $myorder = array(
+ 'dashboard' => __( 'Account Dashboard', 'woocommerce' ),
+ 'edit-account' => __( 'Account Information', 'woocommerce' ),
+ 'edit-address' => __( 'Address Book', 'woocommerce' ),
+ 'orders' => __( 'My Orders', 'woocommerce' ),
+ 'downloads' => __( 'Downloads', 'woocommerce' ),
+ //'payment-methods' => __( 'Payment Methods', 'woocommerce' ),
+ 'my-sub-newsletter' => __( 'Newsletter Subscription', 'woocommerce' ),
+ 'customer-logout' => __( 'Logout', 'woocommerce' ),
+ );
+ return $myorder;
+}
+
+add_filter ( 'woocommerce_account_menu_items', 'wpb_woo_my_account_order' );
 
 ?>

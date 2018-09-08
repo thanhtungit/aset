@@ -4,7 +4,7 @@
 		<div class="nav"><?php echo woocommerce_breadcrumb(); ?></div>
 	</div>
 </section>
-<section class="clearfix">
+<section class="clearfix <?php echo (is_account_page()) ? 'loginPage' : '' ?>">
 	<div class="container">
 		 <div class="row">
 		<?php
