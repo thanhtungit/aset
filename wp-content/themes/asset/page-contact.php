@@ -11,7 +11,7 @@
 </section>
 <section class="clearfix page-contact">
 	<div class="container">
-	   <h1 class="page-title"><?php the_title() ?></h1>
+	   <h1 class="title-woocommerce"><?php the_title() ?></h1>
 	   <div class="row">
 	   	   <div class="col-md-12">
 	   	   	   <?php
