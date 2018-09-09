@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7206fdc1-2b6a-4ee8-be6e-5bc8d99870a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/_style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/_style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/all.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_cart.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/form-edit-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/form-edit-account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php" afterDir="false" />
@@ -50,7 +42,7 @@
         <counts>
           <entry key="css" value="56" />
           <entry key="js" value="243" />
-          <entry key="php" value="2965" />
+          <entry key="php" value="2983" />
           <entry key="scss" value="10946" />
         </counts>
       </usages-collector>
@@ -58,7 +50,7 @@
         <counts>
           <entry key="CSS" value="56" />
           <entry key="JavaScript" value="243" />
-          <entry key="PHP" value="2965" />
+          <entry key="PHP" value="2983" />
           <entry key="SCSS" value="10946" />
         </counts>
       </usages-collector>
@@ -66,7 +58,7 @@
         <counts>
           <entry key="css" value="3" />
           <entry key="js" value="10" />
-          <entry key="php" value="94" />
+          <entry key="php" value="101" />
           <entry key="scss" value="59" />
         </counts>
       </usages-collector>
@@ -74,7 +66,7 @@
         <counts>
           <entry key="CSS" value="3" />
           <entry key="JavaScript" value="10" />
-          <entry key="PHP" value="94" />
+          <entry key="PHP" value="101" />
           <entry key="SCSS" value="59" />
         </counts>
       </usages-collector>
@@ -83,43 +75,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="121" column="16" lean-forward="true" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="71" column="119" selection-start-line="71" selection-start-column="119" selection-end-line="71" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/page/logged-In.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
-              <folding>
-                <element signature="e#164#1818#0" />
-                <element signature="e#2027#2053#0" />
-                <element signature="e#2173#2199#0" />
-                <element signature="e#2626#2652#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="72" lean-forward="true" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="82" />
+            <state relative-caret-position="520">
+              <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -135,8 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col-md-4 float-left</find>
-      <find>order_review</find>
       <find>shop_table woocommerce-checkout-review-order-table</find>
       <find>Your cart is currently empty.</find>
       <find>cart-empty</find>
@@ -165,6 +131,8 @@
       <find>My Account</find>
       <find>My Dashboard</find>
       <find>gree</find>
+      <find>box-address</find>
+      <find>woocommerce-Address</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -218,15 +186,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/asset/js/class.SiteMain.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/page-register.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/sass/all.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_cart.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/form-edit-account.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/sass/_style.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asset/sass/page/logged-In.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php" />
       </list>
     </option>
   </component>
@@ -374,12 +342,12 @@
       <workItem from="1536401095422" duration="972000" />
       <workItem from="1536417800175" duration="2407000" />
       <workItem from="1536478157605" duration="10662000" />
-      <workItem from="1536508899869" duration="9532000" />
+      <workItem from="1536508899869" duration="10039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146574000" />
+    <option name="totallyTimeSpent" value="147081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/form-login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="69" column="105" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/page/_accounts.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -721,23 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
-          <folding>
-            <element signature="e#87#94#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
@@ -749,13 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="97" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -773,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="72" lean-forward="true" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/page/logged-In.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="772">
@@ -790,6 +720,44 @@
             <element signature="e#2173#2199#0" />
             <element signature="e#2626#2652#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/form-login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="69" column="105" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
+          <folding>
+            <element signature="e#87#94#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="71" column="119" selection-start-line="71" selection-start-column="119" selection-end-line="71" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/woocommerce/myaccount/my-address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="48" column="91" selection-start-line="48" selection-start-column="91" selection-end-line="48" selection-end-column="91" />
         </state>
       </provider>
     </entry>

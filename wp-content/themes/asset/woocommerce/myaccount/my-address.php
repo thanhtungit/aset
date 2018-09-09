@@ -46,7 +46,7 @@ $col    = 1;
 
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
-	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-6 float-left woocommerce-Address">
+	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-12 col-md-6 float-left woocommerce-Address">
 			<h5 class="title-small"><?php echo $title; ?></h5>
 		  <address><?php
 			$address = wc_get_account_formatted_address( $name );

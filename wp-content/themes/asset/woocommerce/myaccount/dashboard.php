@@ -69,7 +69,7 @@ below to view or edit information.
 		     ?>
 		   <div class="box-address">
 		    <?php foreach ( $get_addresses as $name => $title ) : ?>
-				<div class="col-md-6 pl-0 float-left u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
+				<div class="col-md-6 pl-0 float-left u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-12 woocommerce-Address">
 						<h4><?php echo $title; ?></h4>
 					  <address><?php
 						$address = wc_get_account_formatted_address( $name );
