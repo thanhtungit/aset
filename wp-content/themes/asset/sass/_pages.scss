@@ -18,30 +18,6 @@ section {
   textarea {
     height: 160px;
   }
-  .group-btn {
-    button.button, a.button, a.button.alt {
-      border: 1px solid #979797;
-      border-radius: 25px;
-      color: #637381;
-      font-family: Helvetica;
-      font-size: 15px;
-      line-height: 18px;
-      text-align: center;
-      text-transform: uppercase;
-      background: transparent;
-      font-weight: normal;
-      padding: 8px 45px;
-      &:hover {
-        color: inherit;
-        background: transparent;
-      }
-    }
-    button.button {
-      background-color: #8DC63F;
-      color: #fff;
-      border: 1px solid #8DC63F;
-    }
-  }
 }
 .loginPage {
     padding-top: 30px;

@@ -36,16 +36,18 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 $oldcol = 1;
 $col    = 1;
 ?>
-<h3>Address Book</h3>
-<p><a class="btn button" href="#">Add New Address</a></p>
+<div class="group-btn d-flex justify-content-between align-items-center title-addr">
+    <h3>Address Book</h3>
+    <a class="btn button btn-green" href="#">Add New Address</a>
+</div>
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	<div class="u-columns woocommerce-Addresses col2-set addresses">
 <?php endif; ?>
 
 <?php foreach ( $get_addresses as $name => $title ) : ?>
 
-	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
-			<h3><?php echo $title; ?></h3>
+	<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-6 float-left woocommerce-Address">
+			<h5 class="title-small"><?php echo $title; ?></h5>
 		  <address><?php
 			$address = wc_get_account_formatted_address( $name );
 			echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );

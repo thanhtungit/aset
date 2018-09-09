@@ -10,7 +10,7 @@ wc_print_notices();
  * @since 2.6.0
  */
 do_action( 'woocommerce_account_navigation' ); ?>
-<div class="woocommerce-MyAccount-content">
+<div class="woocommerce-MyAccount-content col-8 float-left">
 	<?php
 		/**
 		 * My Account content.

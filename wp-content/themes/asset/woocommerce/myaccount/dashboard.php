@@ -29,7 +29,7 @@ $customer_id = get_current_user_id();
      echo '<h4>Hello, '.esc_html( $current_user->display_name ).'!</h4>';
 ?>
 
-<p>
+<p class="description_dashboard">
 From your my account dashboard you have the bility to view a snapshot of your
 recent account activity and update your account information. Select a link
 below to view or edit information.
@@ -54,7 +54,7 @@ below to view or edit information.
 		    </div>
 		</div>
 	</div>
-	<div class="col-md-12 float-left">
+	<div class="col-md-12 float-left col-address">
 		<div class="panel">
 		    <p class="heading">Address Book <a href="#">Manage Addresa</a></p>
 		    <?php
@@ -63,14 +63,14 @@ below to view or edit information.
 					'billing' => __( 'Default Billing address', 'woocommerce' ),
 					'shipping' => __( 'Additional Address', 'woocommerce' ),
 				), $customer_id );
-			//} 
+			//}
 			$oldcol = 1;
 			$col    = 1;
 		     ?>
 		   <div class="box-address">
 		    <?php foreach ( $get_addresses as $name => $title ) : ?>
-				<div class="col-md-6 float-left u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
-						<h3><?php echo $title; ?></h3>
+				<div class="col-md-6 pl-0 float-left u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
+						<h4><?php echo $title; ?></h4>
 					  <address><?php
 						$address = wc_get_account_formatted_address( $name );
 						echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
