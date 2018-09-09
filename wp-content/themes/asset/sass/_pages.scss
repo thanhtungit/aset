@@ -1,5 +1,47 @@
-section.page {
-
+section {
+  .title-small, &.page-contact .wpcf7 .wpcf7-form p:first-of-type {
+    color: #454F5B;
+    font-family: Helvetica;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 13px;
+  }
+  .wpcf7 .wpcf7-form input:not([type="submit"]), textarea {
+    height: 36px;
+    width: 100%;
+    border: 1px solid #C4CDD5;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #637381;
+    padding: 9px 0 9px 12px;
+  }
+  textarea {
+    height: 160px;
+  }
+  .group-btn {
+    button.button, a.button, a.button.alt {
+      border: 1px solid #979797;
+      border-radius: 25px;
+      color: #637381;
+      font-family: Helvetica;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      background: transparent;
+      font-weight: normal;
+      padding: 8px 45px;
+      &:hover {
+        color: inherit;
+        background: transparent;
+      }
+    }
+    button.button {
+      background-color: #8DC63F;
+      color: #fff;
+      border: 1px solid #8DC63F;
+    }
+  }
 }
 .loginPage {
     padding-top: 30px;
@@ -34,4 +76,92 @@ section.page {
             margin-left: 21px!important;
         }
     }
+}
+.page-contact {
+    .row-maps {
+        margin-bottom: 40px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+  .box-content {
+    margin-bottom: 20px;
+    p {
+      color: #637381;
+      font-family: Helvetica;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    a {
+      color: #008BA0;
+      font-family: Helvetica;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .wpcf7 {
+    .wpcf7-form {
+      input[type="submit"] {
+        @extend .btn-cart;
+        cursor: pointer;
+        float: right;
+      }
+      p:first-of-type {
+        padding-left: 15px;
+      }
+      p {
+        margin-bottom: 0 !important;
+      }
+      [class^="col-md-"] {
+        margin-top: 13px;
+        float: left;
+        position: relative;
+        &:before, &:after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+        p {
+          padding: 0 !important;
+        }
+        label {
+          color: #637381;
+          font-family: Helvetica;
+          font-size: 14px;
+          letter-spacing: -0.22px;
+          line-height: 20px;
+          margin-bottom: 3px;
+        }
+        input[type="submit"] {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+}
+
+.page-register {
+  .pl {
+    padding: 15px;
+    margin: 0;
+  }
+  .txt-required {
+    color: #919EAB;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 20px;
+  }
+  label.error {
+    color: red !important;
+  }
+  .group-btn {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px !important;
+    button {
+      cursor: pointer;
+    }
+  }
 }

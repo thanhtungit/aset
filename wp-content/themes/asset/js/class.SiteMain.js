@@ -6,6 +6,7 @@ var SiteMain = (function() {
         open_menu()
         close_menu()
         slider_detail()
+        validatRegister()
     }
 
     //FUNCTION
@@ -33,8 +34,32 @@ var SiteMain = (function() {
             prevArrow: '<i class="fa fa-chevron-left arr-prev" aria-hidden="true"></i>'
         })
     }
-    function detect_class_country() {
-
+    function validatRegister() {
+        var  formRegister = $("#formRegister");
+        formRegister.validate({
+            rules: {
+                firstname: {
+                    required: true,
+                    minlength:2,
+                },
+                lastname: {
+                    required: true,
+                    minlength:2,
+                },
+                email: {
+                    required: true,
+                    email:true,
+                },
+                password: {
+                    required: true
+                },
+                repassword: {
+                    required: true,
+                    //minlength: 5,
+                    equalTo: "#reg_password"
+                }
+            }
+        });
     }
     //RETURN
     return {

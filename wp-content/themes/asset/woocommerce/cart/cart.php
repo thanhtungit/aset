@@ -164,7 +164,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                 </td>
             </tr>
             <tr>
-                <td class="text-right" colspan="6">
+                <td class="group-btn text-right" colspan="6">
                     <?php $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );?>
                     <a href="<?php echo  $shop_page_url; ?>" class="checkout-button button alt wc-forward">
                         <?php esc_html_e( 'Continue Shopping', 'woocommerce' ); ?>

@@ -109,10 +109,19 @@
       }
     }
   }
+
+  /* contact page */
+  .page-contact .wpcf7 .wpcf7-form [class^="col-md-"], section.page-contact .wpcf7 .wpcf7-form p:first-of-type {
+    padding: 0;
+  }
 }
 
 /* ================================== min-width 0 and max-width 768px ====================== */
 @media (min-width: 0) and (max-width: 640px) {
+  /* contact page */
+  .page-contact .wpcf7 .wpcf7-form [class^="col-md-"], section.page-contact .wpcf7 .wpcf7-form p:first-of-type {
+    padding: 0;
+  }
   .d-none-640 {
     display: none !important;
   }

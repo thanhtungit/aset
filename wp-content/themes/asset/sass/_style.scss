@@ -246,6 +246,49 @@ body {
           }
         }
       }
+      .form-row-btn {
+        .woocommerce-form__label-for-checkbox {
+          margin-left: 20px;
+          input {
+            visibility: hidden;
+            margin-right: 15px;
+            &:checked ~ span {
+
+              &:before {
+                border: 1px solid #008BA0;
+              }
+              &:after {
+                color: #008BA0;
+              }
+            }
+          }
+          span.d-inline {
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              height: 16px;
+              left: -30px;
+              top: 0;
+              width: 16px;
+              border-radius: 3px;
+              background-color: #FFFFFF;
+              box-shadow: 0 1px 1px 0 rgba(97,121,133,0.05), 0 1px 1px 0 rgba(64,82,88,0.03), 0 0 0 1px rgba(64,82,88,0.15);
+            }
+            &:after {
+              content: '\f00c';
+              font: normal normal normal 14px/1 FontAwesome;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              color: #fff;
+              position: absolute;
+              left: -28px;
+              top: 3px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
     }
   }
 }

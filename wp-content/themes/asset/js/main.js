@@ -58,7 +58,7 @@ var main = {
 	    else {
 	    	$('#customer_details').addClass('valid_false')
 	  }
-	  
+
 	},
 	backBilling: function(){
 		$('#box-billing-form').removeClass('hide');
