@@ -20,9 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<h1 class="title-woocommerce">Login or Create an Account </h1>
-<div class="row">
-     <div class="col-md-6">
+<div class="col-12">
+    <h1 class="title-woocommerce">Login or Create an Account </h1>
+</div>
+
+     <div class="col-md-6 float-left">
             <div class="box shadowBox">
                 <div class="box-header"><h3>New Customers</h3></div>
                 <div class="box-content">
@@ -31,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 </div>
             </div>
          </div>
-    <div class="col-md-6">
+    <div class="col-md-6 float-left">
             <div class="box shadowBox">
         <?php wc_print_notices(); ?>
 
@@ -87,5 +89,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <?php do_action( 'woocommerce_after_customer_login_form' ); ?>
     </div>
- </div>
 </div>
