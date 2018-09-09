@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'woocommerce' ) : __( 'Shipping address', 'woocommerce' );
+$page_title = ( 'billing' === $load_address ) ? __( 'Billing Address', 'woocommerce' ) : __( 'Additional Address', 'woocommerce' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 

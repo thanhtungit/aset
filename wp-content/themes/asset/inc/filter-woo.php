@@ -56,5 +56,45 @@ function order_fields($fields)
     return $fields;
 }
 
+function wpb_woo_my_account_order() {
+ $myorder = array(
+ 'dashboard' => __( 'Account Dashboard', 'woocommerce' ),
+ 'edit-account' => __( 'Account Information', 'woocommerce' ),
+ 'edit-address' => __( 'Address Book', 'woocommerce' ),
+ 'orders' => __( 'My Orders', 'woocommerce' ),
+ 'downloads' => __( 'Downloads', 'woocommerce' ),
+ //'payment-methods' => __( 'Payment Methods', 'woocommerce' ),
+ 'sub-newsletter' => __( 'Newsletter Subscription', 'woocommerce' ),
+ 'customer-logout' => __( 'Logout', 'woocommerce' ),
+ );
+ return $myorder;
+}
+
+add_filter( 'woocommerce_account_menu_items', 'wpb_woo_my_account_order' );
+ 
+function add_sub_newsletter_endpoint() {
+    add_rewrite_endpoint( 'sub-newsletter', EP_ROOT | EP_PAGES );
+}
+ 
+add_action( 'init', 'add_sub_newsletter_endpoint' );
+
+function sub_newsletter_query_vars( $vars ) {
+    $vars[] = 'sub-newsletter';
+    return $vars;
+}
+ 
+add_filter( 'query_vars', 'sub_newsletter_query_vars', 0 );
+
+function sub_newsletter_endpoint_content() {
+    ?>
+     <h3>Newsletter Subscription</h3>
+     <form method="post" action="">
+         <p><input type="checkbox" name="my_sub"> <label>General Subscription</label></p>
+         <p><button class="btn button float-right" type="submit">Save</button></p>
+    </form>
+  <?php 
+}
+ 
+add_action( 'woocommerce_account_sub-newsletter_endpoint', 'sub_newsletter_endpoint_content' );
 
 ?>
