@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7206fdc1-2b6a-4ee8-be6e-5bc8d99870a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/css/all.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/js/class.SiteMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/js/class.SiteMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/page-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/page-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/page-register.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/page-register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/_style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/_style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_accounts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_accounts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/sass/page/_cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/cart/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asset/woocommerce/cart/cart.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +40,7 @@
           <entry key="css" value="56" />
           <entry key="js" value="243" />
           <entry key="php" value="2663" />
-          <entry key="scss" value="9591" />
+          <entry key="scss" value="9615" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -59,7 +48,7 @@
           <entry key="CSS" value="56" />
           <entry key="JavaScript" value="243" />
           <entry key="PHP" value="2663" />
-          <entry key="SCSS" value="9591" />
+          <entry key="SCSS" value="9615" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,11 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-              <folding>
-                <element signature="e#1487#2161#0" />
-              </folding>
+            <state relative-caret-position="364">
+              <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -396,12 +382,12 @@
       <workItem from="1536400908546" duration="164000" />
       <workItem from="1536401095422" duration="972000" />
       <workItem from="1536417800175" duration="2407000" />
-      <workItem from="1536478157605" duration="9775000" />
+      <workItem from="1536478157605" duration="10066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136155000" />
+    <option name="totallyTimeSpent" value="136446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,11 +787,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asset/sass/_pages.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-          <folding>
-            <element signature="e#1487#2161#0" />
-          </folding>
+        <state relative-caret-position="364">
+          <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
         </state>
       </provider>
     </entry>
