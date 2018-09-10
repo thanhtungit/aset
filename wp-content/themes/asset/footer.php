@@ -1,4 +1,4 @@
- <?php if(is_home() || is_single()){ ?>
+ <?php if(is_home() || is_single() || is_search() || is_page('compare-product')){ ?>
 
  <section class="page home brands">
  	 <!--Brand-->

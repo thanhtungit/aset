@@ -45,10 +45,12 @@
 </header>
 <div class="nav-right">
     <div class="row-search">
+        <form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
         <div class="input">
-            <input type="text" class="form-control" placeholder="Products, Download, Trial">
+            <input type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Products, Download, Trial">
             <img src="<?php echo TEMPLATE_PATH ?>/images/icon - close.png" alt="" class="icon-close-menu">
         </div>
+        </form>
     </div>
     
     <?php
