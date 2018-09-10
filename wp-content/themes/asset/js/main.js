@@ -56,7 +56,8 @@ var main = {
           $('#customer_details').addClass('valid_true')
 	    }
 	    else {
-	    	$('#customer_details').addClass('valid_false')
+          	/*$('#customer_details').removeClass('valid_true')
+	    	$('#customer_details').addClass('valid_false')*/
 	  }
 
 	},

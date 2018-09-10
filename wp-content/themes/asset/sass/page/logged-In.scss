@@ -81,6 +81,12 @@ body.logged-in.woocommerce-account {
           td {
             border-top: 0;
           }
+          tr {
+            box-sizing: inherit;
+            border: 0;
+            display: flex;
+            width: 100%;
+          }
           tr:not(:first-of-type) {
             td {
               padding-top: 12px;
@@ -116,7 +122,7 @@ body.logged-in.woocommerce-account {
           }
           .product-remove {
             vertical-align: top;
-            padding: 0 0 0 25px;
+            padding: 0 0 0 53px;
           }
         }
       }

@@ -43,8 +43,8 @@ function order_fields($fields)
     $fields['billing']['billing_city']['class']       =  ['form-row-first'];
    // $fields['billing']['billing_city']['priority']       = 6;
     $fields['billing']['billing_state']['class']      = ['form-row-last'];
-    $fields['billing']['billing_state']['label'] ='State/Provice'; 
-    $fields['billing']['billing_state']['required'] = false; 
+    $fields['billing']['billing_state']['label'] ='State/Provice';
+    $fields['billing']['billing_state']['required'] = false;
    // $fields['billing']['billing_postcode']['priority']   = 8;
     $fields['billing']['billing_postcode']['class']       =  ['form-row-first'];
     $fields['billing']['billing_country']['class']       =  ['form-row-last'];
@@ -71,30 +71,33 @@ function wpb_woo_my_account_order() {
 }
 
 add_filter( 'woocommerce_account_menu_items', 'wpb_woo_my_account_order' );
- 
+
 function add_sub_newsletter_endpoint() {
     add_rewrite_endpoint( 'sub-newsletter', EP_ROOT | EP_PAGES );
 }
- 
+
 add_action( 'init', 'add_sub_newsletter_endpoint' );
 
 function sub_newsletter_query_vars( $vars ) {
     $vars[] = 'sub-newsletter';
     return $vars;
 }
- 
+
 add_filter( 'query_vars', 'sub_newsletter_query_vars', 0 );
 
 function sub_newsletter_endpoint_content() {
     ?>
      <h3>Newsletter Subscription</h3>
      <form method="post" action="">
-         <p><input type="checkbox" name="my_sub"> <label>General Subscription</label></p>
-         <p><button class="btn button float-right" type="submit">Save</button></p>
+         <p class="form-row-btn"><label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline ml-0">
+            <input type="checkbox" name="my_sub">
+            <span class="d-inline">General Subscription</span></label>
+         </p>
+         <p class="group-btn"><button class="btn-green btn button float-right" type="submit">Save</button></p>
     </form>
-  <?php 
+  <?php
 }
- 
+
 add_action( 'woocommerce_account_sub-newsletter_endpoint', 'sub_newsletter_endpoint_content' );
 
 ?>

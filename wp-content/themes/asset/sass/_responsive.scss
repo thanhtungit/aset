@@ -5,6 +5,9 @@
 }
 /* ================================== min-width 768px and max-width 992px ===============*/
 @media (min-width: 768px) and (max-width: 992px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
+    width: 83%;
+  }
   header {
     padding: 10px 0 10px;
   }
@@ -27,6 +30,9 @@
 }
 /*  ================================  min-width 640px and max-width 768px =====================================*/
 @media (min-width: 640px) and (max-width: 768px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
+    width: 83%;
+  }
   header {
     padding: 10px 0 10px;
   }
@@ -71,6 +77,19 @@
         .product-thumbnail, .product-name, .product-remove {
           display: table-cell !important;
           text-align: left !important;
+          background: #fff;
+          img {
+            position: relative;
+            z-index: 99;
+          }
+        }
+        .product-remove {
+          float: right;
+          top: 0;
+          position: absolute;
+          right: 0;
+          padding-right: 50px;
+          padding-top: 70px;
         }
         .product-price {
           display: table;
@@ -85,13 +104,16 @@
         .product-quantity, .product-subtotal {
           display: table-cell;
           width: auto;
+          background: #fff;
         }
         .product-quantity, .product-subtotal, .product-price {
           position: relative;
           top: -40px;
+          background: #fff;
         }
         .product-name {
           display: inline-block;
+          background: #fff;
         }
         .actions {
           background: transparent;
@@ -118,6 +140,9 @@
 
 /* ================================== min-width 0 and max-width 768px ====================== */
 @media (min-width: 0) and (max-width: 640px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
+    width: 83%;
+  }
   /* contact page */
   .page-contact .wpcf7 .wpcf7-form [class^="col-md-"], section.page-contact .wpcf7 .wpcf7-form p:first-of-type {
     padding: 0;
@@ -167,6 +192,19 @@
         .product-thumbnail, .product-name, .product-remove {
           display: table-cell !important;
           text-align: left !important;
+          background: #fff;
+          img {
+            position: relative;
+            z-index: 99;
+          }
+        }
+        .product-remove {
+          float: right;
+          top: 0;
+          position: absolute;
+          right: 0;
+          padding-right: 50px;
+          padding-top: 70px;
         }
         .product-price {
           display: table;
@@ -181,13 +219,16 @@
         .product-quantity, .product-subtotal {
           display: table-cell;
           width: auto;
+          background: #fff;
         }
         .product-quantity, .product-subtotal, .product-price {
           position: relative;
           top: -40px;
+          background: #fff;
         }
         .product-name {
           display: inline-block;
+          background: #fff;
         }
         .actions {
           background: transparent;

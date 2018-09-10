@@ -30,7 +30,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	return;
 }?>
-<div class="col2-set" id="customer_details">
+<div class="col2-set valid_true" id="customer_details">
             <div class="col-12">
                 <h1 class="title-woocommerce">Checkout</h1>
             </div>
