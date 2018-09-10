@@ -50,7 +50,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	?>
 	 <div class="col-img float-left">
           <?php echo woocommerce_template_loop_product_thumbnail(); ?>
-         <a href="<?php echo get_permalink($product->id); ?>">Compare Products</a>
+         <a href="<?php echo HOME_URL; ?>/compare-product/">Compare Products</a>
         
     </div>
     <div class="col-content float-left">
