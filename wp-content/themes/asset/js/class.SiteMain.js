@@ -7,6 +7,15 @@ var SiteMain = (function() {
         close_menu()
         slider_detail()
         validatRegister()
+        $(document).click(function(e){
+            if($(e.target).is(".nav-right, .menu-icon") || $(e.target).closest(".nav-right, .menu-icon").length)
+                console.log("");
+        else {
+                $('.nav-right').animate({right: "-500px"}, 500, function() {
+                    $('body').removeClass('menu-opening')
+                })
+            }
+        });
     }
 
     //FUNCTION
