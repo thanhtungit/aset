@@ -1,0 +1,99 @@
+.pageCompare {
+  .nav-controller {
+    background-color: #D1E8EF;
+    margin-bottom: 46px;
+    .nav-item a {
+      padding: 20px 54px;
+      border: 0;
+      border-radius: 0;
+      color: #637381;	font-family: Helvetica;	font-size: 17px;	font-weight: 300;	line-height: 20px;
+      height: 100%;
+      img {
+        display: table;
+        margin: 0 auto 13px;
+      }
+    }
+  }
+  .ListImage {
+    margin-bottom: 25px;
+    display: flex !important;
+    align-items: center;
+    .colImage {
+      margin-right: 43px;
+      float: left;
+      width: 187px;
+      text-align: center;
+      &First, &:last-of-type {
+      margin-right: 0 !important;
+      }
+      &First {
+        width: 203px;
+      }
+      img {
+        display: table;
+        margin: 0 auto 17px;
+        width: 118px;
+      }
+      span {
+        color: #008BA0;
+        font-family: Helvetica;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &.ListContent {
+      margin-bottom: 0;
+      width: 100%;
+      line-height: 35px;
+      &:nth-child(odd) {
+        background-color: #F4F6F8;
+      }
+      p {
+        color: #454F5B;
+        font-family: Helvetica;
+        font-size: 18px;
+        line-height: 35px;
+        margin: 0;
+        text-align: left;
+        padding-left: 20px;
+      }
+      .colImageFirst {
+        width: 260px;
+        margin-right: 20px !important;
+      }
+      .colImage:not(:first-of-type) {
+        width: 34px;
+        margin-right: 201px;
+        span {
+          	color: #8DC63F;
+            font-family: "Lucida Grande";
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 23px;
+        }
+      }
+    }
+    &.ListBtn {
+      span {
+        color: #919EAB;
+        font-family: Helvetica;
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 20px;
+        display: block;
+      }
+    }
+  }
+  .colScroll {
+    width: 100%;
+    position: relative;
+    overflow-x: auto;
+    .nav-tabs {
+      width: 850px;
+    }
+    .tab-pane {
+      width: 1120px;
+      max-width: 1120px;
+    }
+  }
+}
