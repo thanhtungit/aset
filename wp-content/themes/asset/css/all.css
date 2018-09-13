@@ -2101,6 +2101,9 @@ body.logged-in.woocommerce-account {
     float: left;
     width: 187px;
     text-align: center; }
+    .pageCompare .ListImage .colImage .woocommerce-Button {
+      display: table;
+      margin: 0 auto 15px; }
     .pageCompare .ListImage .colImageFirst, .pageCompare .ListImage .colImage:last-of-type {
       margin-right: 0 !important; }
     .pageCompare .ListImage .colImageFirst {
