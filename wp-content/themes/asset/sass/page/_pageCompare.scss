@@ -23,6 +23,10 @@
       float: left;
       width: 187px;
       text-align: center;
+      .woocommerce-Button {
+          display: table;
+          margin: 0 auto 15px;
+      }
       &First, &:last-of-type {
       margin-right: 0 !important;
       }
