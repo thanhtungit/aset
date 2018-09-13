@@ -238,7 +238,7 @@
 							<span>✓</span>
             </div>
             <div class="col3 colImage">
-							<span>✓</span>
+							<span></span>
             </div>
             <div class="col4 colImage">
 							<span>✓</span>
