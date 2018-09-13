@@ -215,3 +215,23 @@ body.logged-in.woocommerce-account {
     }
   }
 }
+@media (min-width: 1200px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart {
+    .product-name {
+      width: 227px;
+    }
+    .product-remove {
+      padding: 0 0 0 20px;
+    }
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart {
+    .product-name {
+      width: 177px;
+    }
+    .product-remove {
+      padding: 0 0 0 20px;
+    }
+  }
+}
