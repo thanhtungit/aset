@@ -23,6 +23,10 @@
       float: left;
       width: 187px;
       text-align: center;
+      .woocommerce-Button {
+          display: table;
+          margin: 0 auto 15px;
+      }
       &First, &:last-of-type {
       margin-right: 0 !important;
       }
@@ -81,6 +85,9 @@
         line-height: 20px;
         padding-bottom: 20px;
         display: block;
+      }
+      .group-btn a:last-of-type {
+        color: #008BA0;	font-family: Helvetica;	font-size: 15px;	line-height: 18px;	text-align: center;
       }
     }
   }
