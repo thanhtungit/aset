@@ -118,13 +118,23 @@ do_action( 'woocommerce_before_account_navigation' );
 	</div>
 
 	<?php } ?>
-	<div class="box box-my-recent-viewed">
-		<h5 class="title-small">Recent Viewed Products</h5>
-		<ul class="list-product">
-			<li><a href="#">Proudct 1</a></li>
-			<li><a href="#">Proudct 2</a></li>
-		</ul>
-	</div>
+  <?php
+    $viewed_product = ($_SESSION['viewed_product']) ? $_SESSION['viewed_product'] :[];
+     if($viewed_product){
+   ?>
+  	<div class="box box-my-recent-viewed">
+  		<h5 class="title-small">Recent Viewed Products</h5>
+  		<ul class="list-product">
+  			<?php
+            foreach ($viewed_product as $product_id) {
+              $link = get_permalink($product_id);
+              $title = get_the_title($product_id);
+              echo '<li><a href="'.$link.'" title="'.$title.'">'.$title.'</a></li>' ;
+             }
+         ?>
+  		</ul>
+  	</div>
+ <?php } ?>
 </nav>
 
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>

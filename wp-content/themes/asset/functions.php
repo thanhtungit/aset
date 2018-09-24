@@ -1,4 +1,5 @@
 <?php
+if ( ! session_id() ) @ session_start();
 include_once 'inc/register.php';
 include_once 'inc/filter-woo.php';
 //include_once 'payment/123PaymentGateway.php';

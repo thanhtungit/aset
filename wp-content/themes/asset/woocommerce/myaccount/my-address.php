@@ -25,7 +25,7 @@ $customer_id = get_current_user_id();
 if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
 		'billing' => __( 'Default Billing address', 'woocommerce' ),
-		'shipping' => __( 'Additional Address', 'woocommerce' ),
+		//'shipping' => __( 'Additional Address', 'woocommerce' ),
 	), $customer_id );
 } else {
 	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
@@ -37,8 +37,7 @@ $oldcol = 1;
 $col    = 1;
 ?>
 <div class="group-btn d-flex justify-content-between align-items-center title-addr">
-    <h3>Address Book</h3>
-    <a class="btn button btn-green" href="#">Add New Address</a>
+    <h3>Billing information</h3>
 </div>
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	<div class="u-columns woocommerce-Addresses col2-set addresses">

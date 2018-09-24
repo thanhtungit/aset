@@ -56,12 +56,12 @@ below to view or edit information.
 	</div>
 	<div class="col-md-12 float-left col-address">
 		<div class="panel">
-		    <p class="heading">Address Book <a href="#">Manage Addresa</a></p>
+		    <p class="heading">Billing information <a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a></p>
 		    <?php
 			//if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 				$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
 					'billing' => __( 'Default Billing address', 'woocommerce' ),
-					'shipping' => __( 'Additional Address', 'woocommerce' ),
+					//'shipping' => __( 'Additional Address', 'woocommerce' ),
 				), $customer_id );
 			//}
 			$oldcol = 1;
@@ -75,7 +75,7 @@ below to view or edit information.
 						$address = wc_get_account_formatted_address( $name );
 						echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' );
 					?></address>
-					<p><a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'woocommerce' ); ?></a></p>
+					
 				</div>
 			<?php endforeach; ?>
 		</div>

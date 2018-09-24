@@ -19,8 +19,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+get_header();
+ 
+$viewed_product = isset($_SESSION['viewed_product']) ? $_SESSION['viewed_product'] :[];
+if(is_array($viewed_product) && !in_array(get_the_ID(),$viewed_product)){
+	$viewed_product[] = get_the_ID();
+	$_SESSION['viewed_product'] = $viewed_product;
+}
 
-get_header(); ?>
+ ?>
 <section class="clearfix section bread-crumb">
 	<div class="container">
 		<div class="row">
