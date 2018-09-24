@@ -4,7 +4,7 @@
 		<div class="nav"><?php echo woocommerce_breadcrumb(); ?></div>
 	</div>
 </section>
-<section class="clearfix <?php echo (is_account_page()) ? 'loginPage' : '' ?> pageCompare">
+<section class="clearfix pageCompare">
 	<div class="container">
 		 <div class="row">
 			 <div class="col-md-12">
