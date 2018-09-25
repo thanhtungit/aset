@@ -36,7 +36,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
         <span class="woocommerce-input-wrapper"><input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" /></span>
 	</p>
 
-	<fieldset>
+	<fieldset class="mb-3">
 		<legend class="title-small"><?php esc_html_e( 'Login Information', 'woocommerce' ); ?></legend>
 
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row col-md-6 float-left m-0 pb-3">
@@ -56,7 +56,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="clear"></div>
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
-	<p class="d-flex justify-content-between align-items-center group-btn">
+	<p class="d-flex justify-content-between align-items-center group-btn w-100">
 		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
 		<span class="required">* Required Fields</span>
 		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>

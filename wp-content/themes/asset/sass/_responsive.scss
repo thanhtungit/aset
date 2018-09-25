@@ -33,6 +33,9 @@
   body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
     width: 83%;
   }
+  body.logged-in.woocommerce-account.woocommerce-edit-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm p {
+    width: 100%;
+  }
   header {
     padding: 10px 0 10px;
   }
@@ -142,6 +145,9 @@
 @media (min-width: 0) and (max-width: 640px) {
   body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
     width: 83%;
+  }
+  body.logged-in.woocommerce-account.woocommerce-edit-account .woocommerce-MyAccount-content .woocommerce-EditAccountForm p {
+    width: 100%;
   }
   /* contact page */
   .page-contact .wpcf7 .wpcf7-form [class^="col-md-"], section.page-contact .wpcf7 .wpcf7-form p:first-of-type {

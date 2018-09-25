@@ -73,10 +73,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <span class="notification">* Required Fields</span>
                             </p>
 
-                            <p class="form-row form-row-btn">
+                            <p class="form-row form-row-btn form-row-wide">
                                 <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
                                 <button type="submit" class="woocommerce-Button button btn-cart" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-                                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                                <label class="woocommerce-form__label woocommerce-form__label-for-checkbox d-inline">
                                     <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span class="d-inline"><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
                                 </label>
                             </p>
