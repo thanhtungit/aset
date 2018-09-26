@@ -231,22 +231,10 @@ body.logged-in.woocommerce-account {
 
     /* account-orders-table */
     .account-orders-table {
-      tr {
-        span, strong {
-          color: #212B36;
-          font-family: Helvetica;
-          font-size: 14px;
-          line-height: 20px;
-          font-weight: normal;
-        }
-      }
-      tr:nth-child(2) {
-        td:nth-child(2) {
-          max-width: 300px;
-        }
-      }
       tr:not(.order) {
         td:first-child {
+          display: table-cell;
+          min-width: 71px;
           width: 71px;
           img {
             width: 46px;

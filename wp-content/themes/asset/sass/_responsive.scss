@@ -30,6 +30,73 @@
 }
 /*  ================================  min-width 640px and max-width 768px =====================================*/
 @media (min-width: 640px) and (max-width: 768px) {
+  body.logged-in.woocommerce-account .woocommerce-MyAccount-content table.shop_table {
+    border-collapse: collapse;
+    overflow: hidden;
+    tbody {
+      display: block;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 3px;
+      tr {
+        border: 0;
+        border-bottom: 1px solid #DFE3E8;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        td {
+          border: 0;
+        }
+        &:nth-child(2) {
+          display: block;
+          text-align: left;
+          position: relative;
+          &:after {
+            display: block;
+            clear: both;
+            content: "";
+          }
+          td {
+            display: inline-block;
+            float: left;
+            padding-top: 0;
+            &:nth-child(1) {
+              width: 14%;
+              position: absolute;
+              padding: 16px 0 16px 25px;
+            }
+            &:nth-child(2) {
+              width: 85%;
+              padding-top: 27px;
+              padding-left: 87px;
+              padding-bottom: 0;
+            }
+            &:nth-child(3) {
+              padding-left: 87px;
+            }
+          }
+        }
+        &:last-of-type {
+          border-bottom: 0;
+          td span {
+            font-weight: bold;
+          }
+          td:first-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+    tr {
+      span, strong {
+        color: #212B36;
+        font-family: Helvetica;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: normal;
+      }
+    }
+  }
   body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
     width: 83%;
   }
@@ -143,6 +210,74 @@
 
 /* ================================== min-width 0 and max-width 768px ====================== */
 @media (min-width: 0) and (max-width: 640px) {
+
+    body.logged-in.woocommerce-account .woocommerce-MyAccount-content table.shop_table {
+      border-collapse: collapse;
+      overflow: hidden;
+      tbody {
+        display: block;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 3px;
+        tr {
+          border: 0;
+          border-bottom: 1px solid #DFE3E8;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          td {
+            border: 0;
+          }
+          &:nth-child(2) {
+            display: block;
+            text-align: left;
+            position: relative;
+            &:after {
+              display: block;
+              clear: both;
+              content: "";
+            }
+            td {
+              display: inline-block;
+              float: left;
+              padding-top: 0;
+              &:nth-child(1) {
+                width: 14%;
+                position: absolute;
+                padding: 16px 0 16px 25px;
+              }
+              &:nth-child(2) {
+                width: 85%;
+                padding-top: 27px;
+                padding-left: 87px;
+                padding-bottom: 0;
+              }
+              &:nth-child(3) {
+                padding-left: 87px;
+              }
+            }
+          }
+          &:last-of-type {
+            border-bottom: 0;
+            td span {
+              font-weight: bold;
+            }
+            td:first-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+      tr {
+        span, strong {
+          color: #212B36;
+          font-family: Helvetica;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: normal;
+        }
+      }
+    }
   body.logged-in.woocommerce-account .woocommerce-MyAccount-navigation .box-my-cart .list-items-cart table.shop_table.list-cart .product-name {
     width: 83%;
   }
