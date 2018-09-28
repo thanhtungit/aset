@@ -476,28 +476,28 @@
 							<span>Award-winning antivirus<br/> for Windows</span>
 							<div class="group-btn">
 								<a href="#" class="woocommerce-Button button btn-cart btn-green">Buy now</a>
-								<a href="#">Free trail</a>
+								<a href="#">Free trial</a>
 							</div>
 						</div>
 						<div class="col3 colImage">
 							<span>Award-winning antivirus<br/> for Windows</span>
 							<div class="group-btn">
 								<a href="#" class="woocommerce-Button button btn-cart btn-green">Buy now</a>
-								<a href="#">Free trail</a>
+								<a href="#">Free trial</a>
 							</div>
 						</div>
 						<div class="col4 colImage">
 							<span>Award-winning antivirus<br/> for Windows</span>
 							<div class="group-btn">
 								<a href="#" class="woocommerce-Button button btn-cart btn-green">Buy now</a>
-								<a href="#">Free trail</a>
+								<a href="#">Free trial</a>
 							</div>
 						</div>
 						<div class="col4 colImage">
 							<span>Award-winning antivirus<br/> for Windows</span>
 							<div class="group-btn">
 								<a href="#" class="woocommerce-Button button btn-cart btn-green">Buy now</a>
-								<a href="#">Free trail</a>
+								<a href="#">Free trial</a>
 							</div>
 						</div>
 					</div>

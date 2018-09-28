@@ -76,7 +76,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		            <?php echo $attribute['price_html']; ?>
 		            <button type="submit" class="add_to_cart_button btn-nod32" style="border:0;cursor:pointer;">buy now</button>
 		           
-		            <a href="#">Free trail</a>
+		            <a href="#">Free trial</a>
 		        </div>
 		        <input type="hidden" name="quantity" value="1" min="1" max="1"/>
 		        <input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
