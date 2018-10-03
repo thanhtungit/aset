@@ -2,7 +2,7 @@
 if ( ! session_id() ) @ session_start();
 include_once 'inc/register.php';
 include_once 'inc/filter-woo.php';
-//include_once 'payment/123PaymentGateway.php';
+include_once 'payment/123PaymentGateway.php';
 include_once 'payment/class-onepay.php';
 
 //add_theme_support( 'wc-product-gallery-zoom' );
